@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Ledger Re-Architecture | Nikki Schlesinger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #F5F5F7; color: #1d1d1f; font-family: 'Inter', sans-serif; }
+        .hero-blur { background: radial-gradient(circle at 50% 50%, #EBF5FF 0%, #F5F5F7 100%); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .glass-nav { background: rgba(245, 245, 247, 0.8); backdrop-filter: saturate(180%) blur(20px); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-gray-200 px-6">
+        <div class="max-w-6xl mx-auto h-12 flex justify-between items-center">
+            <a href="index.html" class="text-xs font-semibold tracking-tight hover:opacity-70 transition">← Back to Overview</a>
+            <div class="flex items-center gap-6 text-[11px] font-medium text-gray-500 uppercase tracking-widest">
+                <span>Fintech</span>
+                <span class="text-gray-300">|</span>
+                <span>2024 Project</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-blur pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto text-center reveal" id="hero">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">Global Ledger Re-Architecture</h1>
+            <p class="text-xl md:text-2xl text-gray-500 font-medium leading-tight">Modernizing legacy payment rails for 5 million users.</p>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 -mt-10 reveal">
+        <div class="bg-white/60 backdrop-blur-md border border-white rounded-3xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 shadow-sm">
+            <div class="text-center">
+                <p class="text-4xl font-bold text-[#0071E3]">85%</p>
+                <p class="text-[11px] font-bold uppercase text-gray-400 mt-2">Latency Reduction</p>
+            </div>
+            <div class="text-center border-x border-gray-100">
+                <p class="text-4xl font-bold text-[#0071E3]">$2.4B</p>
+                <p class="text-[11px] font-bold uppercase text-gray-400 mt-2">Annual Volume</p>
+            </div>
+            <div class="text-center">
+                <p class="text-4xl font-bold text-[#0071E3]">99.9%</p>
+                <p class="text-[11px] font-bold uppercase text-gray-400 mt-2">Uptime Achieved</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-6 py-24 space-y-32">
+        
+        <section class="reveal">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-[#0071E3] mb-4">The Challenge</h2>
+            <h3 class="text-3xl font-semibold mb-6">Legacy systems in a real-time world.</h3>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                The existing architecture was built on a decade-old batch processing model. As transaction volume grew, settlement delays increased to 4+ hours, causing significant customer friction and regulatory risk. We needed to transition to a real-time, event-driven ledger without a single second of downtime.
+            </p>
+        </section>
+
+        <section class="reveal">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-[#5E5CE6] mb-4">The Strategy</h2>
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+                <div class="bg-[#EBF5FF] p-8 rounded-[2rem]">
+                    <h4 class="font-bold mb-2">Phased Migration</h4>
+                    <p class="text-sm text-gray-600">Implemented a "Strangler Fig" pattern to slowly move services to the new ledger, ensuring 0% data loss during transition.</p>
+                </div>
+                <div class="bg-[#F0EFFF] p-8 rounded-[2rem]">
+                    <h4 class="font-bold mb-2">Stakeholder Alignment</h4>
+                    <p class="text-sm text-gray-600">Managed cross-functional requirements between Engineering, Legal, and Compliance across three global regions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500 mb-4">The Outcome</h2>
+            <div class="bg-white rounded-[2.5rem] p-10 border border-gray-100 shadow-sm">
+                <blockquote class="text-2xl font-medium leading-tight mb-8">
+                    "This re-architecture didn't just solve a technical debt—it unlocked a 22% increase in customer lifetime value by enabling instant payouts."
+                </blockquote>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full"></div>
+                    <div>
+                        <p class="font-bold text-sm">VP of Engineering</p>
+                        <p class="text-xs text-gray-400">Financial Services Corp</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white py-24 px-6 border-t border-gray-200">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-bold tracking-tight mb-8">Next Case Study</h2>
+            <a href="#" class="inline-block bg-[#F5F5F7] hover:bg-gray-200 px-8 py-4 rounded-full font-semibold transition">
+                RTB Engine Optimization →
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
