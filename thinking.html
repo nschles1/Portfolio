@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Thinking | Nikki Schlesinger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #F5F5F7; color: #1d1d1f; font-family: 'Inter', sans-serif; }
+        .glass-nav { background: rgba(245, 245, 247, 0.8); backdrop-filter: saturate(180%) blur(20px); }
+        .post-card { background: #ffffff; border-radius: 24px; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .post-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.06); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-gray-200 px-6">
+        <div class="max-w-6xl mx-auto h-14 flex justify-between items-center">
+            <a href="index.html" class="font-semibold text-lg tracking-tight">Nikki Schlesinger</a>
+            <div class="flex items-center gap-8 text-[12px] font-medium text-gray-600 uppercase tracking-widest">
+                <a href="index.html" class="hover:text-black transition">Work</a>
+                <a href="thinking.html" class="text-black transition font-bold">Thinking</a>
+                <a href="resume.pdf" download class="bg-[#0071E3] text-white px-4 py-1.5 rounded-full hover:bg-[#0077ED] lowercase transition tracking-normal font-semibold">resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-20 px-6 max-w-4xl mx-auto text-center reveal">
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">Core Thinking.</h1>
+        <p class="text-xl md:text-2xl text-gray-500 font-medium leading-tight">Perspectives on product strategy, agile velocity, and the intersection of tech and culture.</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-32">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <article class="post-card p-10 flex flex-col justify-between h-[400px] reveal">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#0071E3]">Leadership</span>
+                    <h2 class="text-2xl font-bold mt-4 leading-tight">Why Fintech needs Entertainment’s UX (and vice versa).</h2>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-sm mb-6">Exploring the balance between high-security compliance and frictionless joy.</p>
+                    <a href="#" class="text-[#0071E3] font-semibold text-sm hover:underline">Read Article →</a>
+                </div>
+            </article>
+
+            <article class="post-card p-10 flex flex-col justify-between h-[400px] reveal" style="background: #F0EFFF;">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#5E5CE6]">Agile Methodology</span>
+                    <h2 class="text-2xl font-bold mt-4 leading-tight">Scaling Agile without losing the 'Soul' of the Product.</h2>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-sm mb-6">Moving beyond the Jira tickets to focus on narrative-driven development.</p>
+                    <a href="#" class="text-[#5E5CE6] font-semibold text-sm hover:underline">Read Article →</a>
+                </div>
+            </article>
+
+            <article class="post-card p-10 flex flex-col justify-between h-[400px] reveal">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Strategy</span>
+                    <h2 class="text-2xl font-bold mt-4 leading-tight">The Program Manager's Guide to High-Stakes Stakeholders.</h2>
+                </div>
+                <div>
+                    <p class="text-gray-500 text-sm mb-6">How to align technical debt with commercial ambition across global regions.</p>
+                    <a href="#" class="text-[#0071E3] font-semibold text-sm hover:underline">Read Article →</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="py-20 bg-white border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-gray-400 text-sm font-medium">© 2026 Nikki Schlesinger. Driven by Value.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
