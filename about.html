@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Nikki Schlesinger | Product Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #F5F5F7; color: #1d1d1f; font-family: 'Inter', sans-serif; }
+        .glass-nav { background: rgba(245, 245, 247, 0.8); backdrop-filter: saturate(180%) blur(20px); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .profile-image-container { 
+            background: linear-gradient(145deg, #e6e6e7, #ffffff);
+            border-radius: 40px;
+            box-shadow: 20px 20px 60px #d1d1d2, -20px -20px 60px #ffffff;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-gray-200 px-6">
+        <div class="max-w-6xl mx-auto h-14 flex justify-between items-center">
+            <a href="index.html" class="font-semibold text-lg tracking-tight">Nikki Schlesinger</a>
+            <div class="flex items-center gap-8 text-[12px] font-medium text-gray-600 uppercase tracking-widest">
+                <a href="index.html" class="hover:text-black transition">Work</a>
+                <a href="thinking.html" class="hover:text-black transition">Thinking</a>
+                <a href="about.html" class="text-black transition font-bold">About</a>
+                <a href="resume.pdf" download class="bg-[#0071E3] text-white px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition lowercase font-semibold tracking-normal">resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-6 max-w-6xl mx-auto">
+        
+        <section class="grid lg:grid-cols-2 gap-16 items-center mb-32 reveal">
+            <div class="profile-image-container aspect-square flex items-center justify-center text-gray-400 italic">
+                [Professional Portrait]
+            </div>
+            <div>
+                <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-8">Building with <span class="text-[#0071E3]">intent.</span></h1>
+                <p class="text-xl text-gray-500 leading-relaxed mb-6">
+                    I am a Product and Program Leader dedicated to the idea that complex technology should solve simple, human problems.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    With a background spanning high-stakes Fintech, hyper-growth AdTech, and global Media, I help organizations navigate the friction between technical debt and commercial ambition.
+                </p>
+            </div>
+        </section>
+
+        <section class="mb-32 reveal">
+            <h2 class="text-3xl font-bold mb-12 tracking-tight text-center">Core Philosophy</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100">
+                    <div class="w-10 h-10 bg-[#EBF5FF] rounded-full flex items-center justify-center mb-6">
+                        <span class="text-[#0071E3] font-bold">01</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Outcome > Output</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Features are liabilities until they deliver value. I focus on the "Why" to ensure every sprint moves the business forward.</p>
+                </div>
+                <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100">
+                    <div class="w-10 h-10 bg-[#F0EFFF] rounded-full flex items-center justify-center mb-6">
+                        <span class="text-[#5E5CE6] font-bold">02</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Radical Alignment</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Great products are born from shared vision. I bridge the gap between engineering rigor and executive goals.</p>
+                </div>
+                <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100">
+                    <div class="w-10 h-10 bg-[#F5F5F7] rounded-full flex items-center justify-center mb-6">
+                        <span class="text-gray-600 font-bold">03</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Disciplined Agility</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Agile is a mindset, not just a set of meetings. I build workflows that empower teams rather than slowing them down.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-3xl mx-auto reveal">
+            <h2 class="text-3xl font-bold mb-12 tracking-tight">The Journey</h2>
+            <div class="space-y-12 border-l-2 border-gray-100 pl-8 relative">
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-1 w-4 h-4 bg-white border-2 border-[#0071E3] rounded-full"></div>
+                    <p class="text-xs font-bold uppercase tracking-widest text-[#0071E3] mb-2">2022 — Present</p>
+                    <h4 class="text-xl font-bold">Senior Product Leader</h4>
+                    <p class="text-gray-500">Driving digital transformation in the Fintech sector, focusing on global ledger systems and real-time payments.</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-1 w-4 h-4 bg-white border-2 border-[#5E5CE6] rounded-full"></div>
+                    <p class="text-xs font-bold uppercase tracking-widest text-[#5E5CE6] mb-2">2019 — 2022</p>
+                    <h4 class="text-xl font-bold">Program Manager, Media</h4>
+                    <p class="text-gray-500">Directed multi-regional launches for entertainment platforms across 12+ international markets.</p>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-1 w-4 h-4 bg-white border-2 border-gray-300 rounded-full"></div>
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">2016 — 2019</p>
+                    <h4 class="text-xl font-bold">Product Manager</h4>
+                    <p class="text-gray-500">Scaled programmatic advertising infrastructure to handle 10B+ daily data events.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-20 bg-white border-t border-gray-200 text-center">
+        <p class="text-gray-400 text-sm font-medium mb-4">Interested in working together?</p>
+        <a href="mailto:nikki@example.com" class="text-[#0071E3] text-2xl font-bold hover:underline underline-offset-8">hello@nikkischlesinger.com</a>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
