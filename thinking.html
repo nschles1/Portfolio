@@ -3,90 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Core Thinking | Nikki Schlesinger</title>
+    <title>Thinking | Nikki Schlesinger</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Manrope:wght@300;500;700&family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #F5F5F7; color: #1d1d1f; font-family: 'Inter', sans-serif; }
-        .glass-nav { background: rgba(245, 245, 247, 0.8); backdrop-filter: saturate(180%) blur(20px); }
-        .post-card { background: #ffffff; border-radius: 24px; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        .post-card:hover { transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.06); }
-        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        :root {
+            --deep-slate: #384959;
+            --muted-blue: #6A89A7;
+            --clear-sky: #88BDF2;
+            --soft-frost: #BDDDFC;
+        }
+        body { 
+            background-color: #F8FAFC; 
+            color: var(--deep-slate); 
+            font-family: 'Noto Sans', sans-serif; 
+        }
+        h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
+        h3, .ui-font { font-family: 'Manrope', sans-serif; }
+
+        .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
+        
+        .article-card {
+            background: white;
+            border: 1px solid rgba(56, 73, 89, 0.05);
+            border-radius: 32px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(56, 73, 89, 0.1);
+            border-color: var(--soft-frost);
+        }
+        .btn-stormy {
+            background-color: var(--clear-sky);
+            color: white;
+            font-family: 'Manrope', sans-serif;
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 <body class="antialiased">
 
-<nav class="fixed top-0 w-full z-50 glass-nav border-b border-gray-200 px-6">
-    <div class="max-w-6xl mx-auto h-14 flex justify-between items-center">
-        <a href="index.html" class="font-semibold text-lg tracking-tight">Nikki Schlesinger</a>
-        <div class="flex items-center gap-8 text-[12px] font-medium text-gray-600 uppercase tracking-widest">
-            <a href="index.html" class="hover:text-black transition">Work</a>
-            <a href="thinking.html" class="hover:text-black transition">Thinking</a>
-            <a href="about.html" class="hover:text-black transition">About</a>
-            <a href="contact.html" class="hover:text-black transition">Contact</a>
-            <a href="resume.pdf" download class="bg-[#0071E3] text-white px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition lowercase font-semibold tracking-normal">resume</a>
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 px-6">
+        <div class="max-w-6xl mx-auto h-16 flex justify-between items-center">
+            <a href="index.html" class="editorial-font text-lg tracking-widest font-bold uppercase">Nikki Schlesinger</a>
+            <div class="hidden md:flex items-center gap-10 ui-font text-[11px] font-bold uppercase tracking-[0.2em]">
+                <a href="index.html" class="text-slate-400 hover:text-slate-900 transition">Work</a>
+                <a href="about.html" class="text-slate-400 hover:text-slate-900 transition">About</a>
+                <a href="thinking.html" class="text-slate-900 border-b-2 border-slate-900">Thinking</a>
+                <a href="contact.html" class="text-slate-400 hover:text-slate-900 transition">Contact</a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-    <header class="pt-40 pb-20 px-6 max-w-4xl mx-auto text-center reveal">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">Core Thinking.</h1>
-        <p class="text-xl md:text-2xl text-gray-500 font-medium leading-tight">Perspectives on product strategy, agile velocity, and the intersection of tech and culture.</p>
+    <header class="pt-48 pb-20 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-6xl mb-6">Thinking</h1>
+            <p class="ui-font text-lg text-slate-500 font-light tracking-wide uppercase">Insights on product strategy, operational excellence, and the evolving media landscape.</p>
+        </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-6 pb-32">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <article class="post-card p-10 flex flex-col justify-between h-[400px] reveal">
+            <article class="article-card p-10 md:p-12 flex flex-col justify-between">
                 <div>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#0071E3]">Leadership</span>
-                    <h2 class="text-2xl font-bold mt-4 leading-tight">Why Fintech needs Entertainment’s UX (and vice versa).</h2>
+                    <div class="flex gap-4 mb-8">
+                        <span class="ui-font text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full bg-slate-100">Strategy</span>
+                        <span class="ui-font text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full" style="background: var(--soft-frost);">Operational Excellence</span>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 leading-snug">Translating Complexity: Why Structured Frameworks are the Secret to 0→1 Success</h3>
+                    <p class="text-slate-500 mb-10 leading-relaxed">How I leverage operational frameworks to reduce friction and scale workflows in fast-moving product environments.</p>
                 </div>
-                <div>
-                    <p class="text-gray-500 text-sm mb-6">Exploring the balance between high-security compliance and frictionless joy.</p>
-                    <a href="#" class="text-[#0071E3] font-semibold text-sm hover:underline">Read Article →</a>
-                </div>
-            </article>
-
-            <article class="post-card p-10 flex flex-col justify-between h-[400px] reveal" style="background: #F0EFFF;">
-                <div>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#5E5CE6]">Agile Methodology</span>
-                    <h2 class="text-2xl font-bold mt-4 leading-tight">Scaling Agile without losing the 'Soul' of the Product.</h2>
-                </div>
-                <div>
-                    <p class="text-gray-500 text-sm mb-6">Moving beyond the Jira tickets to focus on narrative-driven development.</p>
-                    <a href="#" class="text-[#5E5CE6] font-semibold text-sm hover:underline">Read Article →</a>
+                <div class="flex items-center justify-between mt-auto pt-8 border-t border-slate-50">
+                    <span class="ui-font text-xs font-bold text-slate-400">5 min read</span>
+                    <a href="#" class="ui-font text-xs font-bold uppercase tracking-widest" style="color: var(--muted-blue);">Read Post →</a>
                 </div>
             </article>
 
-            <article class="post-card p-10 flex flex-col justify-between h-[400px] reveal">
+            <article class="article-card p-10 md:p-12 flex flex-col justify-between" style="background: var(--deep-slate);">
                 <div>
-                    <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Strategy</span>
-                    <h2 class="text-2xl font-bold mt-4 leading-tight">The Program Manager's Guide to High-Stakes Stakeholders.</h2>
+                    <div class="flex gap-4 mb-8">
+                        <span class="ui-font text-[10px] font-bold uppercase tracking-widest py-1 px-3 rounded-full bg-slate-700 text-slate-300">AI & Media</span>
+                    </div>
+                    <h3 class="text-2xl md:text-3xl font-bold mb-6 leading-snug text-white">The Future of AdTech: Exploring AI's Role in Smarter Product Decisions</h3>
+                    <p class="text-slate-400 mb-10 leading-relaxed">Actively exploring how AI tools can drive efficiency and deeper customer insights in the evolving media landscape.</p>
                 </div>
-                <div>
-                    <p class="text-gray-500 text-sm mb-6">How to align technical debt with commercial ambition across global regions.</p>
-                    <a href="#" class="text-[#0071E3] font-semibold text-sm hover:underline">Read Article →</a>
+                <div class="flex items-center justify-between mt-auto pt-8 border-t border-slate-700">
+                    <span class="ui-font text-xs font-bold text-slate-500">4 min read</span>
+                    <a href="#" class="ui-font text-xs font-bold uppercase tracking-widest text-[#88BDF2]">Read Post →</a>
                 </div>
             </article>
+
+            <div class="col-span-1 md:col-span-2 p-12 rounded-[2rem] border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-center">
+                <p class="ui-font text-sm text-slate-400 uppercase tracking-widest mb-4">Coming Soon</p>
+                <h3 class="text-2xl font-bold text-slate-300">Building Alignment Across Cross-Functional Stakeholders</h3>
+            </div>
 
         </div>
     </main>
 
-    <footer class="py-20 bg-white border-t border-gray-200">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="text-gray-400 text-sm font-medium">© 2026 Nikki Schlesinger. Driven by Value.</p>
-        </div>
+    <footer class="py-20 text-center">
+        <a href="contact.html" class="btn-stormy px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest shadow-lg">Subscribe to Updates</a>
     </footer>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
 </body>
 </html>
