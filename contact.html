@@ -5,109 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Nikki Schlesinger</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Manrope:wght@300;500;700&family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #F5F5F7; color: #1d1d1f; font-family: 'Inter', sans-serif; }
-        .glass-nav { background: rgba(245, 245, 247, 0.8); backdrop-filter: saturate(180%) blur(20px); }
-        .contact-card { background: #ffffff; border-radius: 32px; border: 1px solid rgba(0,0,0,0.05); }
-        .input-field { 
-            background: #F5F5F7; 
-            border: 1px solid transparent; 
-            border-radius: 12px; 
-            transition: all 0.3s ease; 
+        :root {
+            --deep-slate: #384959;
+            --muted-blue: #6A89A7;
+            --clear-sky: #88BDF2;
+            --soft-frost: #BDDDFC;
         }
-        .input-field:focus { 
-            background: #ffffff; 
-            border-color: #0071E3; 
-            ring: 4px rgba(0,113,227,0.1); 
-            outline: none; 
+        body { 
+            background-color: #F8FAFC; 
+            color: var(--deep-slate); 
+            font-family: 'Noto Sans', sans-serif; 
         }
-        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
+        h3, .ui-font { font-family: 'Manrope', sans-serif; }
+
+        .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
+        
+        .contact-input {
+            background: white;
+            border: 1px solid rgba(56, 73, 89, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .contact-input:focus {
+            outline: none;
+            border-color: var(--clear-sky);
+            box-shadow: 0 0 0 4px rgba(136, 189, 242, 0.1);
+        }
+        .btn-stormy {
+            background-color: var(--clear-sky);
+            color: white;
+            font-family: 'Manrope', sans-serif;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .btn-stormy:hover {
+            background-color: var(--muted-blue);
+            transform: translateY(-2px);
+        }
+        .resume-box {
+            background: var(--soft-frost);
+            border-radius: 32px;
+            transition: transform 0.3s ease;
+        }
+        .resume-box:hover {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-gray-200 px-6">
-        <div class="max-w-6xl mx-auto h-14 flex justify-between items-center">
-            <a href="index.html" class="font-semibold text-lg tracking-tight">Nikki Schlesinger</a>
-            <div class="flex items-center gap-8 text-[12px] font-medium text-gray-600 uppercase tracking-widest">
-                <a href="index.html" class="hover:text-black transition">Work</a>
-                <a href="thinking.html" class="hover:text-black transition">Thinking</a>
-                <a href="about.html" class="hover:text-black transition">About</a>
-                <a href="contact.html" class="text-black transition font-bold">Contact</a>
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 px-6">
+        <div class="max-w-6xl mx-auto h-16 flex justify-between items-center">
+            <a href="index.html" class="editorial-font text-lg tracking-widest font-bold uppercase">Nikki Schlesinger</a>
+            <div class="hidden md:flex items-center gap-10 ui-font text-[11px] font-bold uppercase tracking-[0.2em]">
+                <a href="index.html" class="text-slate-400 hover:text-slate-900 transition">Work</a>
+                <a href="about.html" class="text-slate-400 hover:text-slate-900 transition">About</a>
+                <a href="thinking.html" class="text-slate-400 hover:text-slate-900 transition">Thinking</a>
+                <a href="contact.html" class="text-slate-900 border-b-2 border-slate-900">Contact</a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-32 pb-24 px-6 max-w-6xl mx-auto">
-        
-        <header class="max-w-3xl mb-16 reveal">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">Let's start a <br><span class="text-[#0071E3]">conversation.</span></h1>
-            <p class="text-xl text-gray-500 font-medium leading-tight">Whether you have a specific project in mind or just want to discuss product strategy, I’d love to hear from you.</p>
-        </header>
+    <header class="pt-48 pb-12 px-6 text-center">
+        <h1 class="text-4xl md:text-6xl mb-6">Connect</h1>
+        <p class="ui-font text-sm text-slate-500 tracking-widest uppercase">Let's build something clear and impactful.</p>
+    </header>
 
-        <div class="grid lg:grid-cols-12 gap-12 items-start">
+    <main class="max-w-5xl mx-auto px-6 pb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
-            <div class="lg:col-span-7 reveal">
-                <form action="https://formspree.io/f/your-id" method="POST" class="contact-card p-8 md:p-12 shadow-sm">
-                    <div class="grid md:grid-cols-2 gap-6 mb-6">
-                        <div>
-                            <label class="block text-[11px] font-bold uppercase text-gray-400 mb-2 ml-1">Full Name</label>
-                            <input type="text" name="name" placeholder="Steve Rogers" class="w-full p-4 input-field text-sm" required>
-                        </div>
-                        <div>
-                            <label class="block text-[11px] font-bold uppercase text-gray-400 mb-2 ml-1">Email Address</label>
-                            <input type="email" name="email" placeholder="steve@apple.com" class="w-full p-4 input-field text-sm" required>
-                        </div>
+            <section>
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Name</label>
+                        <input type="text" name="name" class="contact-input" placeholder="Your Name" required>
                     </div>
-                    <div class="mb-8">
-                        <label class="block text-[11px] font-bold uppercase text-gray-400 mb-2 ml-1">Message</label>
-                        <textarea name="message" rows="5" placeholder="Tell me about your project or inquiry..." class="w-full p-4 input-field text-sm" required></textarea>
+                    <div>
+                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Email</label>
+                        <input type="email" name="email" class="contact-input" placeholder="hello@company.com" required>
                     </div>
-                    <button type="submit" class="w-full md:w-auto bg-[#0071E3] text-white px-10 py-4 rounded-full font-bold hover:bg-[#0077ED] transition-all transform hover:scale-[1.02]">
-                        Send Message
-                    </button>
+                    <div>
+                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Message</label>
+                        <textarea name="message" rows="5" class="contact-input" placeholder="How can I help?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-stormy w-full py-4 rounded-xl font-bold uppercase tracking-widest text-xs">Send Message</button>
                 </form>
-            </div>
+            </section>
 
-            <div class="lg:col-span-5 space-y-8 reveal">
-                <div class="contact-card p-10">
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Direct Channels</h3>
-                    <div class="space-y-6">
+            <section class="flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl mb-8">Resources</h2>
+                    
+                    <a href="resume.pdf" download class="resume-box p-8 flex items-center justify-between mb-8 group">
                         <div>
-                            <p class="text-[11px] font-bold text-[#0071E3] uppercase mb-1">Email</p>
-                            <a href="mailto:hello@nikkischlesinger.com" class="text-lg font-semibold hover:underline">hello@nikkischlesinger.com</a>
+                            <h3 class="text-xl font-bold mb-1">Download Resume</h3>
+                            <p class="text-sm text-slate-600">Latest PDF • 2026</p>
                         </div>
-                        <div>
-                            <p class="text-[11px] font-bold text-[#5E5CE6] uppercase mb-1">LinkedIn</p>
-                            <a href="#" class="text-lg font-semibold hover:underline">linkedin.com/in/nikkischlesinger</a>
+                        <div class="bg-white p-3 rounded-full shadow-sm group-hover:bg-slate-50 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        </div>
+                    </a>
+
+                    <div class="space-y-4">
+                        <p class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400">Find me online</p>
+                        <div class="flex gap-6">
+                            <a href="https://linkedin.com/in/nikki-schlesinger" target="_blank" class="text-slate-600 hover:text-[#384959] transition font-bold border-b border-slate-200">LinkedIn</a>
+                            <a href="mailto:nikki@example.com" class="text-slate-600 hover:text-[#384959] transition font-bold border-b border-slate-200">Email</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="p-10">
-                    <h3 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Availability</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        Currently based in <span class="text-black font-semibold">New York</span>. I am available for select strategic consulting engagements and full-time leadership opportunities.
+                <div class="mt-16 p-8 rounded-3xl border border-slate-100 bg-white">
+                    <p class="text-slate-500 italic leading-relaxed">
+                        "I operate comfortably in ambiguity and focus on aligning business impact with user experience."
                     </p>
                 </div>
-            </div>
+            </section>
 
         </div>
     </main>
 
-    <footer class="py-20 border-t border-gray-200 text-center">
-        <p class="text-gray-400 text-[11px] font-bold uppercase tracking-widest">Nikki Schlesinger • 2026</p>
-    </footer>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
 </body>
 </html>
