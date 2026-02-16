@@ -3,139 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikki Schlesinger | Product Leader</title>
+    <title>Nikki Schlesinger | Product & Program Leader</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Manrope:wght@300;500;700&family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --deep-slate: #384959;
+            --muted-blue: #6A89A7;
+            --clear-sky: #88BDF2;
+            --soft-frost: #BDDDFC;
+        }
         body { 
-            background-color: #F5F5F7; 
-            color: #1d1d1f; 
-            font-family: 'Inter', sans-serif; 
-            letter-spacing: -0.01em;
+            background-color: #F8FAFC; 
+            color: var(--deep-slate); 
+            font-family: 'Noto Sans', sans-serif; 
         }
-        .bento-container {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 1.5rem;
+        h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
+        h3, h4, .ui-font { font-family: 'Manrope', sans-serif; }
+        
+        .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
+        .hero-gradient { 
+            background: linear-gradient(180deg, var(--soft-frost) 0%, #F8FAFC 100%); 
         }
-        .apple-card {
-            background: #ffffff;
-            border-radius: 28px;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
-            overflow: hidden;
-            border: 1px solid rgba(0,0,0,0.02);
+        .apple-card { 
+            background: white;
+            border: 1px solid rgba(56, 73, 89, 0.05);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .apple-card:hover {
-            transform: scale(1.01);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+        .apple-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(56, 73, 89, 0.08); }
+        .btn-stormy {
+            background-color: var(--clear-sky);
+            color: white;
+            font-family: 'Manrope', sans-serif;
+            transition: all 0.3s ease;
         }
-        .reveal { opacity: 0; transform: translateY(30px); }
-        .active { opacity: 1; transform: translateY(0); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .btn-stormy:hover { background-color: var(--muted-blue); transform: scale(1.02); }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-gray-200 px-6">
-    <div class="max-w-6xl mx-auto h-14 flex justify-between items-center">
-        <a href="index.html" class="font-semibold text-lg tracking-tight">Nikki Schlesinger</a>
-        <div class="flex items-center gap-8 text-[12px] font-medium text-gray-600 uppercase tracking-widest">
-            <a href="index.html" class="hover:text-black transition">Work</a>
-            <a href="thinking.html" class="hover:text-black transition">Thinking</a>
-            <a href="about.html" class="hover:text-black transition">About</a>
-            <a href="contact.html" class="hover:text-black transition">Contact</a>
-            <a href="resume.pdf" download class="bg-[#0071E3] text-white px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition lowercase font-semibold tracking-normal">resume</a>
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 px-6">
+        <div class="max-w-6xl mx-auto h-16 flex justify-between items-center">
+            <span class="editorial-font text-lg tracking-widest font-bold">NIKKI SCHLESINGER</span>
+            <div class="hidden md:flex items-center gap-10 ui-font text-[11px] font-bold uppercase tracking-[0.2em]">
+                <a href="index.html" class="text-slate-900 border-b-2 border-slate-900">Work</a>
+                <a href="about.html" class="text-slate-400 hover:text-slate-900 transition">About</a>
+                <a href="thinking.html" class="text-slate-400 hover:text-slate-900 transition">Thinking</a>
+                <a href="contact.html" class="text-slate-400 hover:text-slate-900 transition">Contact</a>
+            </div>
         </div>
-    </div>
     </nav>
 
-    <section class="pt-40 pb-24 px-6 text-center reveal">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-[#1d1d1f] mb-8">
-                Building Products That <span class="text-[#0071E3]">Drive Growth</span> and Real Customer Value
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-500 font-medium max-w-2xl mx-auto leading-tight mb-12">
-                Leading cross-functional teams to bring complex products to market, driving measurable growth across advertising, fintech and media platforms.
+    <section class="hero-gradient pt-48 pb-32 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-5xl md:text-8xl mb-8 leading-tight">Product <br>& Program <span class="text-[#6A89A7]">Leader</span></h1>
+            <p class="ui-font text-xl md:text-2xl text-slate-500 max-w-2xl leading-relaxed font-light">
+                15+ years of translating monetization strategies into structured operational plans across advertising and streaming.
             </p>
         </div>
     </section>
 
-    <section id="work" class="max-w-6xl mx-auto px-6 pb-32 reveal">
-        <div class="bento-container">
+    <section class="max-w-6xl mx-auto px-6 pb-32">
+        <div class="grid grid-cols-12 gap-6">
             
-            <<a href="work-detail.html" class="col-span-12 md:col-span-8 apple-card p-10 bg-[#EBF5FF] flex flex-col justify-between h-[450px]">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-[#0071E3]">Fintech & Finance</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-4">Global Ledger Re-Architecture</h2>
-                    <p class="text-gray-600 text-lg max-w-md">Modernizing legacy payment rails for 5M+ users with 85% latency reduction.</p>
-                </a>
-                <div class="flex gap-12">
-                    <div><p class="text-3xl font-bold text-[#0071E3]">$2.4B</p><p class="text-xs text-gray-500 uppercase">Annual Volume</p></div>
-                    <div><p class="text-3xl font-bold text-[#0071E3]">100%</p><p class="text-xs text-gray-500 uppercase">Compliance Pass</p></div>
+            <a href="work-detail.html" class="col-span-12 md:col-span-8 apple-card p-12 rounded-[3rem]">
+                <p class="ui-font text-xs font-bold uppercase tracking-widest mb-4" style="color: var(--muted-blue);">Fintech & Financial Services</p>
+                <h3 class="text-4xl font-bold mb-6">Global Ledger Transformation</h3>
+                <p class="text-slate-500 text-lg mb-8">Modernizing transactional infrastructure for a Tier-1 financial institution at 0→1 scale.</p>
+                <div class="w-16 h-16 rounded-2xl flex items-center justify-center" style="background: var(--soft-frost);">
+                    <img src="Amex Logo.avif" class="w-10 h-10 object-contain" alt="Amex">
                 </div>
-            </div>
+            </a>
 
-            <div class="col-span-12 md:col-span-4 apple-card p-10 bg-[#F0EFFF] flex flex-col justify-between h-[450px]">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-[#5E5CE6]">Advertising</span>
-                    <h2 class="text-2xl font-bold mt-4 mb-4">RTB Engine Optimization</h2>
-                    <p class="text-gray-600">Scaling programmatic platforms for high-velocity bidding.</p>
-                </div>
-                <div class="text-indigo-600 font-bold text-xl group cursor-pointer">
-                    Read Use Case <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
-                </div>
-            </div>
+            <a href="work-adtech.html" class="col-span-12 md:col-span-4 apple-card p-12 rounded-[3rem] text-white" style="background: var(--deep-slate);">
+                <p class="ui-font text-xs font-bold uppercase tracking-widest mb-4 text-[#88BDF2]">Advertising Technology</p>
+                <h3 class="text-3xl font-bold mb-6">Self-Serve Ad Scaling</h3>
+                <p class="text-slate-300 mb-8">Empowering 80+ partners to deliver инновационные release cycles at Spotify.</p>
+                <img src="Spotify log.png" class="w-10 h-10" alt="Spotify">
+            </a>
 
-            <div class="col-span-12 md:col-span-6 apple-card p-10 bg-[#F5F5F7] border border-gray-200 flex flex-col justify-between h-[400px]">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Media & Tech</span>
-                    <h2 class="text-2xl font-bold mt-4 mb-4">Streaming Expansion</h2>
-                    <p class="text-gray-600">Orchestrating multi-region launches for entertainment platforms.</p>
+            <a href="work-streaming.html" class="col-span-12 md:col-span-6 apple-card p-12 rounded-[3rem]">
+                <div class="flex justify-between items-start mb-12">
+                   <img src="Directv logo.jpeg" class="h-8 object-contain" alt="DIRECTV">
+                   <span class="ui-font text-[10px] font-bold uppercase bg-slate-100 px-3 py-1 rounded-full">New Case Study</span>
                 </div>
-                <p class="text-4xl font-bold text-gray-300">12+ Markets</p>
-            </div>
+                <h3 class="text-3xl font-bold mb-4">Market Expansion</h3>
+                <p class="text-slate-500">Go-to-market strategies that optimized acquisition and conversion for DIRECTV.</p>
+            </a>
 
-            <div class="col-span-12 md:col-span-6 apple-card p-10 bg-white border border-gray-200 h-[400px]">
-                <span class="text-xs font-bold uppercase tracking-widest text-gray-500">The Method</span>
-                <h2 class="text-2xl font-bold mt-4 mb-6">Strategy meets execution.</h2>
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-3">
-                        <div class="w-1.5 h-1.5 rounded-full bg-[#0071E3] mt-2"></div>
-                        <p class="text-gray-600 text-sm"><span class="font-semibold text-black">Agile at Scale:</span> Removing friction from engineering workflows.</p>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <div class="w-1.5 h-1.5 rounded-full bg-[#0071E3] mt-2"></div>
-                        <p class="text-gray-600 text-sm"><span class="font-semibold text-black">Data-Driven Growth:</span> Leveraging analytics to drive product roadmaps.</p>
-                    </li>
-                </ul>
-            </div>
+             <a href="about.html" class="col-span-12 md:col-span-6 apple-card p-12 rounded-[3rem]" style="background: var(--soft-frost);">
+                <h3 class="text-3xl font-bold mb-4">Experience Design</h3>
+                <p class="text-slate-600 mb-8">Leading program management for the Xfinity Digital Home ecosystem at Comcast NBC Universal.</p>
+                <img src="Comcast logo.png" class="h-8 object-contain" alt="Comcast">
+            </a>
 
         </div>
     </section>
 
-    <footer class="py-20 bg-white border-t border-gray-200">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">Let's build the next generation.</h2>
-            <p class="text-gray-500 mb-8">Currently available for strategic product leadership roles.</p>
-            <div class="flex justify-center gap-6 text-sm font-medium">
-                <a href="#" class="text-[#0071E3] hover:underline underline-offset-4">LinkedIn</a>
-                <a href="#" class="text-[#0071E3] hover:underline underline-offset-4">Email</a>
-            </div>
-        </div>
+    <footer class="py-32 text-center border-t border-slate-200">
+        <h2 class="text-4xl md:text-5xl mb-10">Ready to build?</h2>
+        <a href="contact.html" class="btn-stormy px-12 py-5 rounded-full text-lg font-bold shadow-lg">
+            Get in touch
+        </a>
     </footer>
 
-    <script>
-        // Simple Intersection Observer to handle "Apple-style" reveal on scroll
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
 </body>
 </html>
