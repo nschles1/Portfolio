@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Nikki Schlesinger | Product & Growth Leader</title>
+    <title>About Nikki Schlesinger | Product & Program Leader</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -15,7 +15,6 @@
         .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
-        /* Styled Logo Container for Uploaded Files */
         .logo-box { 
             width: 52px; height: 52px; 
             display: flex; align-items: center; justify-content: center; 
@@ -40,6 +39,14 @@
             color: white;
             transition: all 0.3s ease;
         }
+        .strength-card {
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.05);
+            padding: 1.5rem;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+        .strength-card:hover { transform: translateY(-4px); }
     </style>
 </head>
 <body class="antialiased">
@@ -52,7 +59,7 @@
                 <a href="thinking.html" class="hover:text-black transition">Thinking</a>
                 <a href="about.html" class="text-black transition font-bold">About</a>
                 <a href="contact.html" class="hover:text-black transition">Contact</a>
-                <a href="resume.pdf" download class="btn-primary px-5 py-2 rounded-full lowercase font-semibold tracking-normal hover:brightness-110">resume</a>
+                <a href="resume.pdf" download class="btn-primary px-5 py-2 rounded-full lowercase font-semibold tracking-normal hover:brightness-110 transition">resume</a>
             </div>
         </div>
     </nav>
@@ -60,14 +67,44 @@
     <main class="pt-32 pb-24 px-6 max-w-4xl mx-auto">
         
         <section class="reveal">
-            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-10 leading-[1.1]">
-                Hi. I’m a product and growth leader who loves turning <span style="color: var(--accent);">complexity into clarity.</span>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-[1.15]">
+                Product and Program leader driving <span style="color: var(--accent);">strategic prioritization</span> and cross-functional delivery.
             </h1>
             
-            <div class="space-y-6 text-lg md:text-xl text-gray-500 leading-relaxed font-medium">
-                <p>Over the past 15+ years, I’ve worked at companies like <span class="text-black">Spotify, American Express, Comcast, and DIRECTV</span>...</p>
-                <p>My career has spanned product management, product marketing, and program leadership. I’ve launched ad platforms, scaled self-serve ad tools, and launched products domestically and internationally.</p>
-                <p>I’m especially drawn to roles where <span class="italic text-black font-semibold">strategy meets execution</span>. I operate comfortably in ambiguity and focus on aligning business impact with user experience.</p>
+            <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+                <p>
+                    With 15+ years of experience, I specialize in translating business and monetization strategies into structured operational plans and scalable execution frameworks across advertising, streaming, and financial services platforms.
+                </p>
+                <p>
+                    I’ve led complex initiatives from concept through launch — including bringing <span class="text-black font-semibold">0→1 products to market at American Express</span>, scaling self-serve ad capabilities and <span class="text-black font-semibold">podcast monetization at Spotify</span>, and leading acquisition-focused go-to-market strategy at <span class="text-black font-semibold">DIRECTV</span>.
+                </p>
+                <p>
+                    My approach combines strategic vision with structured execution: defining product roadmaps, prioritizing near-term delivery against long-term goals, and ensuring operational alignment across Engineering, Product, Marketing, Sales, and Analytics teams.
+                </p>
+                <p>
+                    I’m passionate about the evolving media landscape and actively exploring <span class="italic">AI tools</span> that drive smarter product decisions and operational efficiency.
+                </p>
+            </div>
+        </section>
+
+        <section class="mt-24 reveal">
+            <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-8">Core Strengths</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="strength-card">
+                    <p class="font-bold text-gray-900">Product planning & prioritization</p>
+                </div>
+                <div class="strength-card">
+                    <p class="font-bold text-gray-900">Cross-functional coordination</p>
+                </div>
+                <div class="strength-card">
+                    <p class="font-bold text-gray-900">Roadmap execution & launch readiness</p>
+                </div>
+                <div class="strength-card">
+                    <p class="font-bold text-gray-900">Operational frameworks & scaling</p>
+                </div>
+                <div class="strength-card md:col-span-2">
+                    <p class="font-bold text-gray-900 text-center">Stakeholder influence in fast-moving environments</p>
+                </div>
             </div>
         </section>
 
@@ -75,7 +112,6 @@
             <h2 class="text-3xl font-bold mb-16 tracking-tight">The Journey</h2>
             
             <div class="space-y-16">
-                
                 <div class="flex flex-col md:flex-row gap-6 md:gap-10">
                     <div class="w-24 text-xs font-bold text-slate-400 pt-2 shrink-0 uppercase tracking-widest">2023 — 2025</div>
                     <div class="flex items-start gap-5">
@@ -83,7 +119,7 @@
                         <div>
                             <h4 class="text-xl font-bold">DIRECTV</h4>
                             <p class="role-title">Senior Product Marketer</p>
-                            <p class="text-gray-500 mt-3 leading-relaxed text-sm md:text-base">Develop product strategies that drive targeted marketing tactics for acquiring new subscribers, leveraging cross-funnel advertising to optimize conversion.</p>
+                            <p class="text-gray-500 mt-3 leading-relaxed text-sm md:text-base">Develop product strategies that drive targeted marketing tactics for acquiring new subscribers, leveraging cross-funnel advertising to optimize engagement and conversion.</p>
                         </div>
                     </div>
                 </div>
@@ -95,7 +131,7 @@
                         <div>
                             <h4 class="text-xl font-bold">Spotify Advertising</h4>
                             <p class="role-title">Program Manager / Strategic Operations Lead</p>
-                            <p class="text-gray-500 mt-3 leading-relaxed text-sm md:text-base">Led end-to-end strategy for large-scale initiatives, overseeing 80+ partners to launch Spotify’s self-serve podcast ads platform and build the advertising product marketing site.</p>
+                            <p class="text-gray-600 mt-3 leading-relaxed text-sm md:text-base">Led end-to-end strategy for large-scale advertising initiatives, overseeing 80+ cross-functional partners to launch Spotify’s self-serve podcast ads platform and establish the operational rhythms needed for innovative, market-ready releases.</p>
                         </div>
                     </div>
                 </div>
@@ -107,7 +143,7 @@
                         <div>
                             <h4 class="text-xl font-bold">Comcast NBC Universal</h4>
                             <p class="role-title">Program Manager, Experience Design</p>
-                            <p class="text-gray-500 mt-3 leading-relaxed text-sm md:text-base">Led program management for the Xfinity Digital Home web and native applications, focusing on the seamless delivery of the digital home ecosystem.</p>
+                            <p class="text-gray-600 mt-3 leading-relaxed text-sm md:text-base">Led program management for the Xfinity Digital Home web and native applications.</p>
                         </div>
                     </div>
                 </div>
@@ -119,11 +155,10 @@
                         <div>
                             <h4 class="text-xl font-bold">American Express</h4>
                             <p class="role-title">Senior Product / Product Marketing</p>
-                            <p class="text-gray-500 mt-3 leading-relaxed text-sm md:text-base">Led product strategy and global expansion initiatives—launching new products and scaling acquisition platforms over a decade of digital innovation.</p>
+                            <p class="text-gray-600 mt-3 leading-relaxed text-sm md:text-base">Led product strategy, digital innovation, and global expansion initiatives — launching new products, scaling acquisition platforms, and driving growth through customer-centered design and operational excellence.</p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
