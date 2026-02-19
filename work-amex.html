@@ -7,16 +7,35 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Manrope:wght@300;400;500;700&family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --deep-slate: #384959; --muted-blue: #6A89A7; --clear-sky: #88BDF2; }
-        body { background-color: #ffffff; color: var(--deep-slate); font-family: 'Noto Sans', sans-serif; }
+        :root { --deep-slate: #384959; --amex-blue: #007bc1; --soft-blue: #f0f7ff; }
+        
+        /* The Halo Background Style from Spotify Page */
+        body { 
+            background-color: #ffffff; 
+            color: var(--deep-slate); 
+            font-family: 'Noto Sans', sans-serif; 
+            background-image: radial-gradient(circle at top right, rgba(0, 123, 193, 0.05) 0%, transparent 40%),
+                              radial-gradient(circle at 20% 50%, rgba(0, 123, 193, 0.03) 0%, transparent 30%);
+            background-attachment: fixed;
+        }
+
         h1, h2 { font-family: 'Aboreto', cursive; }
         h3, h4, .ui-font { font-family: 'Manrope', sans-serif; }
-        .case-study-hero { background-color: #ffffff; padding-top: 80px; padding-bottom: 60px; }
+        
         .info-grid { border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 40px 0; margin: 40px 0; }
-        .section-header { margin-bottom: 40px; }
-        .content-block { margin-bottom: 80px; }
+        
+        /* List Styling to match Spotify page */
         .arrow-list li { position: relative; padding-left: 25px; margin-bottom: 12px; }
-        .arrow-list li::before { content: "→"; position: absolute; left: 0; color: var(--muted-blue); }
+        .arrow-list li::before { content: "→"; position: absolute; left: 0; color: var(--amex-blue); font-weight: bold; }
+        
+        /* Execution Principles - Shaded Rounded Boxes */
+        .principle-card {
+            background: rgba(248, 250, 252, 0.8);
+            border: 1px solid rgba(0, 123, 193, 0.08);
+            border-radius: 2rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -27,12 +46,12 @@
         </a>
     </nav>
 
-    <header class="case-study-hero px-6 text-center">
+    <header class="pt-16 pb-12 px-6 text-center">
         <div class="max-w-4xl mx-auto">
             <img src="Amex%20Logo.avif" class="w-16 h-16 object-contain mx-auto mb-10" alt="American Express">
             <h1 class="text-4xl md:text-5xl mb-6 leading-tight uppercase tracking-tight">Scaling Digital Customer Acquisition</h1>
             <p class="text-lg md:text-xl font-light text-slate-500 max-w-3xl mx-auto leading-relaxed">
-                Owning the primary digital engine for acquiring new Card Members and driving profitable growth at scale for American Express.
+                Owning the primary digital engine for acquiring new Card Members and driving growth at scale.
             </p>
         </div>
     </header>
@@ -53,108 +72,94 @@
             </div>
             <div>
                 <h3 class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Focus</h3>
-                <p class="text-sm font-medium">Acquisition & Personalization</p>
+                <p class="text-sm font-medium">Acquisition Strategy</p>
             </div>
         </div>
     </section>
 
-    <section class="py-12 px-6 max-w-4xl mx-auto content-block">
+    <section class="py-12 px-6 max-w-4xl mx-auto">
         <h2 class="text-2xl mb-8 tracking-widest uppercase border-b border-slate-100 pb-4">Context</h2>
         <div class="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
             <p>As Product Lead for the American Express U.S. Consumer acquisition website, I owned the primary digital engine for acquiring new Card Members and driving profitable growth at scale.</p>
-            <p>The platform served over 1M monthly unique visitors and played a central role in acquiring new customers, increasing spend among existing Card Members, and supporting long-term organic growth — all within a highly regulated financial services environment.</p>
-        </div>
-        
-        <div class="mt-12 space-y-8">
-            <div class="bg-slate-50 p-6 rounded-[2rem] border border-slate-100">
-                <img src="Amex-Responsive-Update.jpg" class="rounded-[1rem] shadow-lg w-full" alt="Amex Responsive Design">
-                <p class="text-center text-[10px] uppercase tracking-widest text-slate-400 mt-4">Unified Responsive Platform Framework</p>
-            </div>
+            <p>The platform served over 1M monthly unique visitors and played a central role in acquiring new customers and supporting long-term organic growth within a highly regulated environment.</p>
         </div>
     </section>
 
-    <section class="py-12 px-6 max-w-4xl mx-auto content-block">
+    <section class="py-12 px-6 max-w-4xl mx-auto">
         <h2 class="text-2xl mb-12 tracking-widest uppercase border-b border-slate-100 pb-4">The Objective</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <div>
                 <h4 class="font-bold mb-3">Platform Redesign</h4>
-                <p class="text-slate-500 text-sm font-light">Reimagine the card shopping experience with modern UX and a unified responsive platform for 19 core Card products.</p>
+                <p class="text-slate-500 text-sm font-light">Reimagine the card shopping experience with modern UX and a unified responsive platform.</p>
             </div>
             <div>
                 <h4 class="font-bold mb-3">Targeted Infrastructure</h4>
-                <p class="text-slate-500 text-sm font-light">Enable predictive targeting and pre-approved offers to support upsell and cross-sell opportunities through personalized flows.</p>
+                <p class="text-slate-500 text-sm font-light">Enable predictive targeting and pre-approved offers to support upsell opportunities.</p>
             </div>
-            <div>
-                <h4 class="font-bold mb-3">Efficiency & ROI</h4>
-                <p class="text-slate-500 text-sm font-light">Improve efficiency and ROI across digital acquisition channels through optimized conversion paths.</p>
+        </div>
+        
+        <div class="bg-white p-4 rounded-[2.5rem] shadow-xl border border-slate-50 mb-20">
+            <img src="Amex-Responsive-Update.jpg" class="rounded-[2rem] w-full" alt="Amex Responsive Platform Update">
+            <p class="text-center text-[10px] uppercase tracking-[0.3em] text-slate-400 mt-6">Digital Acquisition Platform Redesign</p>
+        </div>
+    </section>
+
+    <section class="py-12 px-6 max-w-5xl mx-auto">
+        <h2 class="text-center text-xl mb-12 tracking-[0.3em] text-slate-400 uppercase">Execution Principles</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+            <div class="principle-card">
+                <h4 class="font-bold mb-2 text-sm uppercase tracking-wide text-[#007bc1]">Customer-first personalization</h4>
+                <p class="text-sm text-slate-500 font-light">Help customers find the right card for their lifestyle and needs through intuitive data-driven paths.</p>
             </div>
-            <div>
-                <h4 class="font-bold mb-3">Personalization</h4>
-                <p class="text-slate-500 text-sm font-light">Tailor the experience for existing Card Members to improve product fit and increase long-term spend.</p>
+            <div class="principle-card">
+                <h4 class="font-bold mb-2 text-sm uppercase tracking-wide text-[#007bc1]">Platform simplification</h4>
+                <p class="text-sm text-slate-500 font-light">Transitioning from fragmented legacy experiences to a unified, globally responsive architecture.</p>
+            </div>
+            <div class="principle-card">
+                <h4 class="font-bold mb-2 text-sm uppercase tracking-wide text-[#007bc1]">Compliance by design</h4>
+                <p class="text-sm text-slate-500 font-light">Embedding stringent legal and financial regulatory requirements into design and dev workflows early.</p>
+            </div>
+            <div class="principle-card">
+                <h4 class="font-bold mb-2 text-sm uppercase tracking-wide text-[#007bc1]">Test-and-learn mindset</h4>
+                <p class="text-sm text-slate-500 font-light">Aggressive A/B testing and performance measurement to continuously optimize acquisition ROI.</p>
             </div>
         </div>
     </section>
 
-    <section class="py-12 px-6 max-w-4xl mx-auto content-block">
+    <section class="py-12 px-6 max-w-4xl mx-auto mb-20">
         <h2 class="text-2xl mb-8 tracking-widest uppercase border-b border-slate-100 pb-4">My Role</h2>
         <p class="text-lg text-slate-600 font-light mb-8">
-            As Product, Marketing, and Program Lead, I owned the strategy and end-to-end execution, balancing speed, scale, brand consistency, and regulatory rigor.
+            As Product, Marketing, and Program Lead, I owned the strategy and end-to-end execution, balancing speed, scale, and brand consistency.
         </p>
         <ul class="arrow-list text-slate-600 font-light">
             <li>Defined the acquisition strategy and customer experience vision.</li>
             <li>Led the full site redesign — from UX and content strategy through delivery.</li>
             <li>Managed agency partners and all workstreams from concept to launch.</li>
             <li>Drove cross-functional alignment across Legal, Compliance, Operations, and Engineering.</li>
-            <li>Partnered with 19 Card product owners to gather requirements and develop content.</li>
+            <li>Partnered with 19 Card product owners to gather requirements and secure approvals.</li>
             <li>Led offer development, testing, and optimization to improve conversion.</li>
         </ul>
     </section>
 
-    <section class="py-24 px-6 bg-[#384959] text-white">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-center text-xl mb-12 tracking-[0.3em] opacity-60">EXECUTION PRINCIPLES</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-                <div>
-                    <h4 class="font-bold text-[#88BDF2] mb-2 uppercase tracking-wide text-xs">Customer-first personalization</h4>
-                    <p class="text-sm text-slate-300 font-light">Help customers find the right card for their lifestyle and needs.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-[#88BDF2] mb-2 uppercase tracking-wide text-xs">Platform simplification</h4>
-                    <p class="text-sm text-slate-300 font-light">Move from fragmented experiences to a unified responsive platform.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-[#88BDF2] mb-2 uppercase tracking-wide text-xs">Compliance by design</h4>
-                    <p class="text-sm text-slate-300 font-light">Embed legal and regulatory requirements into workflows early.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-[#88BDF2] mb-2 uppercase tracking-wide text-xs">Test-and-learn mindset</h4>
-                    <p class="text-sm text-slate-300 font-light">Launch, measure, and continuously optimize for performance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 max-w-4xl mx-auto content-block">
-        <h2 class="text-2xl mb-12 tracking-widest uppercase border-b border-slate-100 pb-4">Impact & Results</h2>
+    <section class="py-12 px-6 max-w-4xl mx-auto mb-20">
+        <h2 class="text-2xl mb-8 tracking-widest uppercase border-b border-slate-100 pb-4">Impact & Results</h2>
         <ul class="arrow-list text-lg text-slate-600 font-light space-y-4">
-            <li>Generated **$3.5B** in annual revenue.</li>
-            <li>Acquired **700K** new accounts annually.</li>
-            <li>Supported over **1M** monthly unique visitors.</li>
-            <li>Delivered an **11% YoY increase** in new account acquisition following platform optimization.</li>
+            <li>Generated $3.5B in annual revenue.</li>
+            <li>Acquired 700K new accounts annually.</li>
+            <li>Supported over 1M monthly unique visitors.</li>
+            <li>Delivered an 11% YoY increase in new account acquisition following optimization.</li>
             <li>Established scalable acquisition and personalization infrastructure for ongoing growth.</li>
         </ul>
     </section>
 
-    <section class="py-12 px-6 max-w-4xl mx-auto content-block">
+    <section class="py-12 px-6 max-w-4xl mx-auto mb-24">
         <h2 class="text-2xl mb-8 tracking-widest uppercase border-b border-slate-100 pb-4">Lessons Learned</h2>
-        <div class="bg-slate-50 p-10 rounded-[2rem] border-l-4 border-muted-blue">
+        <div class="bg-slate-50 p-10 rounded-[2rem] border-l-4 border-[#007bc1] mb-8">
             <p class="text-lg text-slate-600 font-light italic leading-relaxed">
-                "In highly regulated, multi-stakeholder environments, prioritization is everything. Understanding each stakeholder’s requirements — and aligning them to a clear overarching strategy — was critical to delivering impact without slowing execution."
+                "In highly regulated environments, prioritization is everything. Aligning diverse stakeholders to a clear overarching strategy was critical to delivering impact without slowing execution."
             </p>
         </div>
-        <div class="mt-8 text-slate-600 font-light leading-relaxed space-y-4">
-            <p>Post-launch, sustained growth required disciplined iteration. We established a structured optimization roadmap focused on site performance, personalization refinement, and organic content strategy.</p>
-        </div>
+        <p class="text-slate-600 font-light leading-relaxed">Post-launch, sustained growth required disciplined iteration. We established a structured optimization roadmap focused on site performance, personalization refinement, and organic content strategy.</p>
     </section>
 
     <footer class="py-24 border-t border-slate-100 text-center">
