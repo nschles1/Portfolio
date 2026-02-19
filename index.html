@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikki Schlesinger | Product & Program Leader</title>
+    <title>Nikki Schlesinger | Program & Product Leadership</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Manrope:wght@300;500;700&family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -14,54 +17,71 @@
             --clear-sky: #88BDF2;
             --soft-frost: #BDDDFC;
         }
-        body { 
-            background-color: #F8FAFC; 
-            color: var(--deep-slate); 
-            font-family: 'Noto Sans', sans-serif; 
-        }
+        body { background-color: #F8FAFC; color: var(--deep-slate); font-family: 'Noto Sans', sans-serif; }
         h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
-        h3, h4, .ui-font { font-family: 'Manrope', sans-serif; }
-        
+        h3, .ui-font { font-family: 'Manrope', sans-serif; }
         .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
-        .hero-gradient { 
-            background: linear-gradient(180deg, var(--soft-frost) 0%, #F8FAFC 100%); 
-        }
-        .apple-card { 
-            background: white;
-            border: 1px solid rgba(56, 73, 89, 0.05);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .apple-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(56, 73, 89, 0.08); }
         
-        .btn-stormy {
-            background-color: var(--clear-sky);
-            color: white;
-            font-family: 'Manrope', sans-serif;
-            transition: all 0.3s ease;
-            display: inline-block;
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
         }
-        .btn-stormy:hover { 
-            background-color: var(--deep-slate); 
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(56, 73, 89, 0.15);
+        #mobile-menu.active {
+            max-height: 400px;
+            opacity: 1;
+            padding-bottom: 2rem;
         }
     </style>
-    <link rel="icon" type="image/png" href="favicon.png">
-    
 </head>
+
 <body class="antialiased">
 
     <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 px-6">
         <div class="max-w-6xl mx-auto h-16 flex justify-between items-center">
-            <span class="editorial-font text-lg tracking-widest font-bold uppercase">NIKKI SCHLESINGER</span>
+            <a href="index.html" class="editorial-font text-lg tracking-widest font-bold uppercase">Nikki Schlesinger</a>
+            
             <div class="hidden md:flex items-center gap-10 ui-font text-[11px] font-bold uppercase tracking-[0.2em]">
-                <a href="index.html" class="text-slate-900 border-b-2 border-slate-900">Work</a>
+                <a href="index.html" class="text-slate-400 hover:text-slate-900 transition">Work</a>
                 <a href="about.html" class="text-slate-400 hover:text-slate-900 transition">About</a>
                 <a href="thinking.html" class="text-slate-400 hover:text-slate-900 transition">Thinking</a>
                 <a href="contact.html" class="text-slate-400 hover:text-slate-900 transition">Contact</a>
             </div>
+
+            <button id="menu-toggle" class="md:hidden text-slate-900 focus:outline-none p-2" aria-label="Toggle Menu">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden bg-white/95 px-6 space-y-6">
+            <a href="index.html" class="block ui-font text-xs font-bold uppercase tracking-[0.2em] text-slate-900 pt-4">Work</a>
+            <a href="about.html" class="block ui-font text-xs font-bold uppercase tracking-[0.2em] text-slate-900">About</a>
+            <a href="thinking.html" class="block ui-font text-xs font-bold uppercase tracking-[0.2em] text-slate-900">Thinking</a>
+            <a href="contact.html" class="block ui-font text-xs font-bold uppercase tracking-[0.2em] text-slate-900">Contact</a>
         </div>
     </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('active');
+                // Optional: Change icon from hamburger to X when active
+                const icon = btn.querySelector('svg');
+                if (menu.classList.contains('active')) {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />';
+                } else {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />';
+                }
+            });
+        });
+    </script>
 
     <section class="hero-gradient pt-48 pb-32 px-6">
         <div class="max-w-5xl mx-auto">
