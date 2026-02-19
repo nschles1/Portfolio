@@ -9,119 +9,102 @@
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Manrope:wght@300;500;700&family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --deep-slate: #384959;
-            --muted-blue: #6A89A7;
-            --clear-sky: #88BDF2;
-            --soft-frost: #BDDDFC;
+            --stormy-charcoal: #2C3E50;
+            --stormy-teal: #5D6D7E;
+            --morning-mist: #D5DBDB;
+            --soft-cloud: #F4F6F6;
         }
-        body { background-color: #ffffff; color: var(--deep-slate); font-family: 'Noto Sans', sans-serif; line-height: 1.7; }
+        body { background-color: #ffffff; color: var(--stormy-charcoal); font-family: 'Noto Sans', sans-serif; line-height: 1.7; }
         h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
         h3, .ui-font { font-family: 'Manrope', sans-serif; }
-        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); }
-        .case-study-metric { border-left: 1px solid var(--soft-frost); padding-left: 1.5rem; }
-        #mobile-menu { transition: all 0.3s ease-in-out; max-height: 0; overflow: hidden; opacity: 0; }
-        #mobile-menu.active { max-height: 400px; opacity: 1; padding-bottom: 2rem; }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-100 px-6">
-        <div class="max-w-6xl mx-auto h-16 flex justify-between items-center">
-            <a href="index.html" class="editorial-font text-lg tracking-widest font-bold uppercase">Nikki Schlesinger</a>
-            <button id="menu-toggle" class="md:hidden text-slate-900 focus:outline-none p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-            </button>
-            <div class="hidden md:flex items-center gap-10 ui-font text-[11px] font-bold uppercase tracking-[0.2em]">
-                <a href="index.html" class="text-slate-900 border-b-2 border-slate-900">Work</a>
-                <a href="about.html" class="text-slate-400 hover:text-slate-900 transition">About</a>
-                <a href="thinking.html" class="text-slate-400 hover:text-slate-900 transition">Thinking</a>
-                <a href="contact.html" class="px-5 py-2 rounded-full lowercase font-semibold tracking-normal hover:brightness-110 transition" style="background-color: var(--clear-sky); color: white;">contact</a>
-            </div>
-        </div>
-        <div id="mobile-menu" class="md:hidden bg-white/95 space-y-6">
-            <a href="index.html" class="block ui-font text-xs font-bold uppercase tracking-[0.2em] pt-4">Work</a>
-            <a href="about.html" class="block ui-font text-xs font-bold uppercase tracking-[0.2em]">About</a>
-            <a href="thinking.html" class="block ui-font text-xs font-bold uppercase tracking-[0.2em]">Thinking</a>
-            <a href="contact.html" class="block ui-font text-xs font-bold uppercase tracking-[0.2em]">Contact</a>
-        </div>
-    </nav>
-
-    <main class="pt-40 pb-24">
+    <main class="pt-32 pb-24">
         <header class="max-w-5xl mx-auto px-6 mb-20">
             <div class="flex items-center gap-4 mb-6">
-                <span class="ui-font text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--muted-blue)]">Product Marketing</span>
-                <div class="h-[1px] w-12 bg-[var(--soft-frost)]"></div>
-                <span class="ui-font text-[10px] font-bold uppercase tracking-[0.3em] text-slate-300">Case Study 03</span>
+                <span class="ui-font text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--stormy-teal)]">Product Marketing</span>
+                <div class="h-[1px] w-12 bg-[var(--morning-mist)]"></div>
+                <span class="ui-font text-[10px] font-bold uppercase tracking-[0.3em] text-slate-300">DIRECTV</span>
             </div>
-            <h1 class="text-4xl md:text-6xl mb-8 leading-tight">DIRECTV: Repositioning for the <span class="editorial-font italic text-[var(--muted-blue)]">Streaming Era.</span></h1>
-            <p class="text-xl text-slate-500 max-w-3xl font-light leading-relaxed">Driving customer acquisition and margin growth by translating technical streaming capabilities into a modern brand promise.</p>
+            <h1 class="text-4xl md:text-6xl mb-8 leading-tight">Repositioning for the <br><span class="editorial-font italic text-[var(--stormy-teal)]">Streaming Era.</span></h1>
+            <p class="text-xl text-slate-500 max-w-3xl font-light leading-relaxed">
+                Repositioning a legacy satellite brand to drive demand toward higher-margin streaming products and accelerate subscriber growth.
+            </p>
         </header>
 
         <section class="max-w-5xl mx-auto px-6 mb-20">
-            <div class="bg-slate-50 rounded-[40px] p-8 md:p-16 flex flex-col items-center">
-                <h3 class="ui-font text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 mb-10">Cross-Funnel Strategy Framework</h3>
-                <img src="directv-funnel.png" alt="Product Marketing Funnel" class="w-full max-w-3xl h-auto shadow-2xl rounded-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-10 border-y border-[var(--morning-mist)]">
+                <div>
+                    <h4 class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Growth</h4>
+                    <p class="text-3xl font-light">220K+ <span class="text-sm">Subs/Qtr</span></p>
+                </div>
+                <div>
+                    <h4 class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Awareness</h4>
+                    <p class="text-3xl font-light">35% <span class="text-sm">Lift</span></p>
+                </div>
+                <div>
+                    <h4 class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2">Shift</h4>
+                    <p class="text-3xl font-light">7% <span class="text-sm">Product Mix</span></p>
+                </div>
             </div>
         </section>
 
-        <section class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-16">
-            <aside class="md:col-span-4">
-                <div class="sticky top-32 space-y-12">
-                    <div class="grid grid-cols-1 gap-8 py-8 border-b border-slate-100">
-                        <div class="case-study-metric">
-                            <h4 class="ui-font text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1">New Subscribers</h4>
-                            <p class="text-2xl">220K+ <span class="text-sm">/ Qtr</span></p>
-                        </div>
-                        <div class="case-study-metric">
-                            <h4 class="ui-font text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1">Awareness Lift</h4>
-                            <p class="text-2xl">35%</p>
-                        </div>
-                    </div>
+        <section class="max-w-5xl mx-auto px-6 mb-24">
+            <div class="bg-[var(--soft-cloud)] rounded-[3rem] p-12 flex flex-col items-center">
+                <h3 class="ui-font text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 mb-8">Cross-Funnel Execution Framework</h3>
+                
+            </div>
+        </section>
+
+        <section class="max-w-5xl mx-auto px-6 grid md:grid-cols-12 gap-16">
+            <aside class="md:col-span-4 space-y-12">
+                <div>
+                    <h3 class="ui-font text-xs font-bold uppercase tracking-widest mb-4">Core Contributions</h3>
+                    <ul class="text-sm text-slate-500 space-y-3">
+                        <li>• Customer Acquisition Strategy</li>
+                        <li>• Competitive UVPs & RTBs</li>
+                        <li>• Full-Funnel Campaign Orchestration</li>
+                        <li>• Operational Briefing Frameworks</li>
+                    </ul>
                 </div>
             </aside>
 
             <div class="md:col-span-8 space-y-16">
                 <div>
-                    <h2 class="text-2xl mb-6">Context</h2>
-                    <p class="text-slate-600">DIRECTV was navigating slower subscriber growth amid intense competition from streaming-first platforms. While associated with satellite TV, higher margins lay in streaming products. The challenge: reposition the brand and drive demand toward streaming while delivering near-term results.</p>
+                    <h2 class="text-2xl mb-6">Objective</h2>
+                    <p class="text-slate-600">The challenge was twofold: reposition the brand to compete with streaming-first platforms and drive demand toward higher-margin streaming offerings while delivering near-term acquisition results.</p>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl mb-6">Strategic Approach</h2>
-                    <ul class="space-y-8">
-                        <li class="flex gap-4">
-                            <span class="text-[var(--clear-sky)] font-bold">•</span>
-                            <span><strong>Product-Led Positioning:</strong> Translated enhancements like universal search and watchlists into customer-centric value propositions.</span>
-                        </li>
-                        <li class="flex gap-4">
-                            <span class="text-[var(--clear-sky)] font-bold">•</span>
-                            <span><strong>Operational Excellence:</strong> Streamlined campaign briefing, aligning Product, GTM, and Creative teams to reduce execution friction.</span>
-                        </li>
-                    </ul>
+                    <h2 class="text-2xl mb-6">Approach</h2>
+                    <div class="space-y-10">
+                        <div>
+                            <h4 class="font-bold text-[var(--stormy-teal)] mb-2 uppercase text-xs tracking-widest">Product-Led Positioning</h4>
+                            <p class="text-slate-600 text-sm">Partnered with Product to translate streaming enhancements—unified live TV, universal search, and watchlists—into customer-centric value propositions.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[var(--stormy-teal)] mb-2 uppercase text-xs tracking-widest">Scalable Foundations</h4>
+                            <p class="text-slate-600 text-sm">Created a centralized Value Proposition “Bible,” codifying core RTBs and claims by audience to enable consistent activation across GTM teams.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[var(--stormy-teal)] mb-2 uppercase text-xs tracking-widest">Operational Excellence</h4>
+                            <p class="text-slate-600 text-sm">Streamlined the campaign briefing process, aligning stakeholders across Product, Creative, and Media to reduce friction and accelerate speed to market.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[var(--soft-cloud)] p-10 rounded-[2rem]">
+                    <h2 class="text-xl mb-6">Lessons Learned</h2>
+                    <p class="text-sm text-slate-600 italic">"Operational rigor scales impact: Streamlined processes didn’t just improve speed—they enabled better creative, tighter alignment, and more consistent results."</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-24 bg-white border-t border-slate-100 text-center">
-        <div class="max-w-2xl mx-auto px-6">
-            <h2 class="text-3xl mb-8">Next Case Study</h2>
-            <a href="work-amex.html" class="ui-font text-xs font-bold uppercase tracking-[0.3em] text-slate-400 hover:text-slate-900 transition">— American Express</a>
-        </div>
+    <footer class="py-20 text-center border-t border-slate-100">
+        <a href="index.html" class="ui-font text-xs font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-[var(--stormy-teal)]">Back to Work</a>
     </footer>
-
-    <script>
-        const btn = document.getElementById('menu-toggle');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('active');
-            const icon = btn.querySelector('svg');
-            icon.innerHTML = menu.classList.contains('active') 
-                ? '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />'
-                : '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />';
-        });
-    </script>
 </body>
 </html>
