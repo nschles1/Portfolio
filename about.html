@@ -1,123 +1,48 @@
-
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Nikki Schlesinger | Product & Program Leader</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Manrope:wght@300;500;700&family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --deep-slate: #384959;
-            --muted-blue: #6A89A7;
-            --clear-sky: #88BDF2;
-            --soft-frost: #BDDDFC;
-        }
-        body { 
-            background-color: #F8FAFC; 
-            color: var(--deep-slate); 
-            font-family: 'Noto Sans', sans-serif; 
-            letter-spacing: -0.01em;
-        }
-        h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
-        h3, h4, .ui-font { font-family: 'Manrope', sans-serif; }
-
-        .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
-        
-        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        
-        .logo-box { 
-            width: 56px; height: 56px; 
-            display: flex; align-items: center; justify-content: center; 
-            background: #ffffff; 
-            border-radius: 14px; 
-            box-shadow: 0 4px 12px rgba(56, 73, 89, 0.05);
-            border: 1px solid rgba(56, 73, 89, 0.1);
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        .logo-box img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
-        
-        .role-title {
-            font-family: 'Manrope', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--muted-blue);
-            margin-top: 0.25rem;
-            letter-spacing: 0.02em;
-            text-transform: uppercase;
-        }
-
-        .strength-card {
-            background: white;
-            border: 1px solid rgba(56, 73, 89, 0.08);
-            padding: 1.5rem;
-            border-radius: 24px;
-            transition: all 0.3s ease;
-        }
-        .strength-card:hover { 
-            border-color: var(--clear-sky);
-            transform: translateY(-4px);
-        }
-
-        .btn-stormy {
-            background-color: var(--clear-sky);
-            color: white;
-            font-family: 'Manrope', sans-serif;
-            transition: all 0.3s ease;
-        }
-    </style>
-</head>
-<body class="antialiased">
-
-    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 px-6">
-        <div class="max-w-6xl mx-auto h-16 flex justify-between items-center">
-            <a href="index.html" class="editorial-font text-lg tracking-widest font-bold">NIKKI SCHLESINGER</a>
-            <div class="hidden md:flex items-center gap-10 ui-font text-[11px] font-bold uppercase tracking-[0.2em]">
-                <a href="index.html" class="text-slate-400 hover:text-slate-900 transition">Work</a>
-                <a href="about.html" class="text-slate-900 border-b-2 border-slate-900">About</a>
-                <a href="thinking.html" class="text-slate-400 hover:text-slate-900 transition">Thinking</a>
-                <a href="contact.html" class="text-slate-400 hover:text-slate-900 transition">Contact</a>
-                <a href="resume.pdf" download class="btn-stormy px-5 py-2 rounded-full lowercase font-semibold tracking-normal hover:brightness-110 transition">resume</a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="pt-40 pb-24 px-6 max-w-4xl mx-auto">
-        
-        <section class="reveal">
-            <h1 class="text-4xl md:text-5xl mb-12 leading-[1.2] text-slate-800">
-                Product and Program leader driving <span style="color: var(--muted-blue);">strategic prioritization</span> and delivery.
-            </h1>
+<section class="mt-40 reveal">
+            <h2 class="text-3xl mb-16 tracking-tight">Core Strengths</h2>
             
-            <div class="space-y-8 text-lg text-slate-600 leading-relaxed">
-                <p>
-                    With 15+ years of experience, I specialize in translating business and monetization strategies into structured operational plans and scalable execution frameworks across advertising, streaming, and financial services platforms.
-                </p>
-                <p>
-                    I’ve led complex initiatives from concept through launch — including bringing <span class="text-slate-900 font-semibold">0→1 products to market at American Express</span>, scaling self-serve ad capabilities at <span class="text-slate-900 font-semibold">Spotify</span>, and leading go-to-market strategy at <span class="text-slate-900 font-semibold">DIRECTV</span>.
-                </p>
-                <p>
-                    My approach combines strategic vision with structured execution: defining roadmaps, prioritizing delivery, and ensuring operational alignment across Engineering, Product, Marketing, Sales, and Analytics.
-                </p>
-                <p class="ui-font font-medium italic" style="color: var(--deep-slate);">
-                    I am actively exploring AI tools that drive smarter product decisions and operational efficiency.
-                </p>
+            <div class="grid md:grid-cols-3 gap-5">
+                <div class="strength-card">
+                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Product Planning & Prioritization</p>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light">Roadmap development, feature prioritization, launch readiness, short vs. long-term trade-offs</p>
+                </div>
+                
+                <div class="strength-card">
+                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Cross-Functional Orchestration</p>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light">Operating models, ownership clarity, executive communication</p>
+                </div>
+
+                <div class="strength-card">
+                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Monetization & Growth</p>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light">Ads platforms, acquisition strategy, revenue impact</p>
+                </div>
+
+                <div class="strength-card">
+                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Operational Scale</p>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light">Process design, workflow optimization, AI-enabled efficiency</p>
+                </div>
+
+                <div class="strength-card">
+                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Strategic Leadership</p>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light">Direction setting, clear decision making under ambiguity</p>
+                </div>
+
+                <div class="strength-card">
+                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Stakeholder Engagement</p>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light">Trust building, team alignment, and accountability with senior partners</p>
+                </div>
             </div>
         </section>
 
-        <section class="mt-24 reveal">
-            <h2 class="ui-font text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 mb-10">Core Strengths</h2>
-            <div class="grid md:grid-cols-2 gap-5">
-                <div class="strength-card"><p class="ui-font font-bold text-slate-700">Product planning & prioritization</p></div>
-                <div class="strength-card"><p class="ui-font font-bold text-slate-700">Cross-functional coordination</p></div>
-                <div class="strength-card"><p class="ui-font font-bold text-slate-700">Roadmap execution & launch readiness</p></div>
-                <div class="strength-card"><p class="ui-font font-bold text-slate-700">Operational frameworks & scaling</p></div>
-                <div class="strength-card md:col-span-2 text-center" style="background: var(--soft-frost); border: none;">
-                    <p class="ui-font font-bold text-slate-800 uppercase tracking-widest text-xs">Stakeholder influence in fast-moving environments</p>
-                </div>
+        <section class="mt-40 reveal p-10 md:p-16 rounded-[40px]" style="background: var(--soft-frost);">
+            <h2 class="text-3xl mb-10 tracking-tight">My Approach</h2>
+            <div class="space-y-8">
+                <p class="text-xl md:text-2xl italic font-light text-slate-800 leading-relaxed">
+                    "I believe great program leadership is about creating clarity and accountability, and building trust across teams so people can move fast together."
+                </p>
+                <p class="text-lg text-slate-700 leading-relaxed font-light">
+                    When priorities, trade-offs, and success metrics are explicit, teams make better decisions. My job is to create clear strategies that drive both business and customer goals, align people around the work, reinforce ownership, and ensure teams understand the impact of what they’re building.
+                </p>
             </div>
         </section>
 
@@ -174,19 +99,3 @@
                 </div>
             </div>
         </section>
-    </main>
-
-    <footer class="py-24 bg-white border-t border-slate-100 text-center">
-        <a href="contact.html" class="ui-font text-xs font-bold uppercase tracking-[0.3em] text-slate-400 hover:text-slate-900 transition">Get in touch</a>
-    </footer>
-
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    </script>
-</body>
-</html>
