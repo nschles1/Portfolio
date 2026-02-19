@@ -18,108 +18,117 @@
             color: var(--deep-slate); 
             font-family: 'Noto Sans', sans-serif; 
         }
-        h1, .editorial-font { font-family: 'Aboreto', cursive; }
-        .ui-font { font-family: 'Manrope', sans-serif; }
+        h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
+        h3, .ui-font { font-family: 'Manrope', sans-serif; }
+
         .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
         
-        .form-input {
-            width: 100%;
-            padding: 1rem;
+        .contact-input {
             background: white;
             border: 1px solid rgba(56, 73, 89, 0.1);
             border-radius: 12px;
-            outline: none;
-            transition: border-color 0.3s ease;
+            padding: 1rem;
+            width: 100%;
+            transition: all 0.3s ease;
         }
-        .form-input:focus { border-color: var(--clear-sky); }
-        
+        .contact-input:focus {
+            outline: none;
+            border-color: var(--clear-sky);
+            box-shadow: 0 0 0 4px rgba(136, 189, 242, 0.1);
+        }
         .btn-stormy {
             background-color: var(--clear-sky);
             color: white;
+            font-family: 'Manrope', sans-serif;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
-        .hidden { display: none; }
+        .btn-stormy:hover {
+            background-color: var(--muted-blue);
+            transform: translateY(-2px);
+        }
+        .resume-box {
+            background: var(--soft-frost);
+            border-radius: 32px;
+            transition: transform 0.3s ease;
+        }
+        .resume-box:hover {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 px-6">
         <div class="max-w-6xl mx-auto h-16 flex justify-between items-center">
-            <a href="index.html" class="editorial-font text-lg tracking-widest font-bold">NIKKI SCHLESINGER</a>
+            <a href="index.html" class="editorial-font text-lg tracking-widest font-bold uppercase">Nikki Schlesinger</a>
             <div class="hidden md:flex items-center gap-10 ui-font text-[11px] font-bold uppercase tracking-[0.2em]">
                 <a href="index.html" class="text-slate-400 hover:text-slate-900 transition">Work</a>
                 <a href="about.html" class="text-slate-400 hover:text-slate-900 transition">About</a>
                 <a href="thinking.html" class="text-slate-400 hover:text-slate-900 transition">Thinking</a>
                 <a href="contact.html" class="text-slate-900 border-b-2 border-slate-900">Contact</a>
-                <a href="Nikki Schlesinger Resume.pdf" download class="btn-stormy px-5 py-2 rounded-full lowercase font-semibold tracking-normal hover:brightness-110 transition">resume</a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-40 pb-24 px-6 max-w-2xl mx-auto">
-        <section id="contact-content">
-            <h1 class="text-4xl mb-6">Get in touch</h1>
-            <p class="text-slate-500 mb-12 text-lg">Have a project in mind or just want to connect? Drop me a line below.</p>
+    <header class="pt-48 pb-12 px-6 text-center">
+        <h1 class="text-4xl md:text-6xl mb-6">Connect</h1>
+        <p class="ui-font text-sm text-slate-500 tracking-widest uppercase">Let's build something clear and impactful.</p>
+    </header>
 
-            <form id="contact-form" action="https://formspree.io/f/your-endpoint" method="POST" class="space-y-6">
-                <div>
-                    <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 block">Name</label>
-                    <input type="text" name="name" required class="form-input">
-                </div>
-                <div>
-                    <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 block">Email Address</label>
-                    <input type="email" name="email" required class="form-input">
-                </div>
-                <div>
-                    <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-2 block">Message</label>
-                    <textarea name="message" rows="5" required class="form-input"></textarea>
-                </div>
-                <button type="submit" class="btn-stormy w-full py-4 rounded-xl ui-font font-bold uppercase tracking-widest text-sm hover:brightness-110">
-                    Send Message
-                </button>
-            </form>
+    <main class="max-w-5xl mx-auto px-6 pb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
+            <section>
+                <form action="https://formspree.io/f/your-endpoint-here" method="POST" class="space-y-6">
+                    <div>
+                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Name</label>
+                        <input type="text" name="name" class="contact-input" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Email</label>
+                        <input type="email" name="email" class="contact-input" placeholder="hello@company.com" required>
+                    </div>
+                    <div>
+                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Message</label>
+                        <textarea name="message" rows="5" class="contact-input" placeholder="How can I help?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-stormy w-full py-4 rounded-xl font-bold uppercase tracking-widest text-xs">Send Message</button>
+                </form>
+            </section>
 
-            <div id="success-message" class="hidden text-center py-20 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-500 rounded-full mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
+            <section class="flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl mb-8">Resources</h2>
+                    
+                    <a href="Nikki Schlesinger Resume.pdf" download class="resume-box p-8 flex items-center justify-between mb-8 group">
+                        <div>
+                            <h3 class="text-xl font-bold mb-1">Download Resume</h3>
+                            <p class="text-sm text-slate-600">Latest PDF • 2026</p>
+                        </div>
+                        <div class="bg-white p-3 rounded-full shadow-sm group-hover:bg-slate-50 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        </div>
+                    </a>
+
+                    <div class="space-y-4">
+                        <p class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400">Find me online</p>
+                        <div class="flex gap-6">
+                            <a href="https://linkedin.com/in/nikki-schlesinger" target="_blank" class="text-slate-600 hover:text-[#384959] transition font-bold border-b border-slate-200">LinkedIn</a>
+                            <a href="mailto:nikki@example.com" class="text-slate-600 hover:text-[#384959] transition font-bold border-b border-slate-200">Email</a>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="text-2xl font-bold mb-2">Message Sent!</h2>
-                <p class="text-slate-500">Thanks for reaching out, Nikki will get back to you shortly.</p>
-                <button onclick="window.location.reload()" class="mt-8 text-sm ui-font font-bold text-slate-400 uppercase tracking-widest hover:text-slate-900 transition">Send another</button>
-            </div>
-        </section>
+
+                <div class="mt-16 p-8 rounded-3xl border border-slate-100 bg-white">
+                    <p class="text-slate-500 italic leading-relaxed">
+                        "I operate comfortably in ambiguity and focus on aligning business impact with user experience."
+                    </p>
+                </div>
+            </section>
+
+        </div>
     </main>
 
-    <script>
-        // Simple script to handle the "In-Page" confirmation
-        const form = document.getElementById('contact-form');
-        const successMessage = document.getElementById('success-message');
-        const contentHeader = document.querySelector('h1');
-        const contentSub = document.querySelector('p');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const data = new FormData(form);
-            
-            // Send the data to Formspree
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
-            });
-
-            if (response.ok) {
-                // Hide form and text, show success message
-                form.classList.add('hidden');
-                contentHeader.classList.add('hidden');
-                contentSub.classList.add('hidden');
-                successMessage.classList.remove('hidden');
-            } else {
-                alert('Oops! There was a problem submitting your form');
-            }
-        });
-    </script>
 </body>
 </html>
