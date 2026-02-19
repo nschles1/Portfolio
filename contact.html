@@ -1,101 +1,135 @@
-<section class="mt-40 reveal">
-            <h2 class="text-3xl mb-16 tracking-tight">Core Strengths</h2>
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Nikki Schlesinger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Manrope:wght@300;500;700&family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-slate: #384959;
+            --muted-blue: #6A89A7;
+            --clear-sky: #88BDF2;
+            --soft-frost: #BDDDFC;
+        }
+        body { 
+            background-color: #F8FAFC; 
+            color: var(--deep-slate); 
+            font-family: 'Noto Sans', sans-serif; 
+        }
+        h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
+        h3, .ui-font { font-family: 'Manrope', sans-serif; }
+
+        .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
+        
+        .contact-input {
+            background: white;
+            border: 1px solid rgba(56, 73, 89, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .contact-input:focus {
+            outline: none;
+            border-color: var(--clear-sky);
+            box-shadow: 0 0 0 4px rgba(136, 189, 242, 0.1);
+        }
+        .btn-stormy {
+            background-color: var(--clear-sky);
+            color: white;
+            font-family: 'Manrope', sans-serif;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .btn-stormy:hover {
+            background-color: var(--muted-blue);
+            transform: translateY(-2px);
+        }
+        .resume-box {
+            background: var(--soft-frost);
+            border-radius: 32px;
+            transition: transform 0.3s ease;
+        }
+        .resume-box:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 px-6">
+        <div class="max-w-6xl mx-auto h-16 flex justify-between items-center">
+            <a href="index.html" class="editorial-font text-lg tracking-widest font-bold uppercase">Nikki Schlesinger</a>
+            <div class="hidden md:flex items-center gap-10 ui-font text-[11px] font-bold uppercase tracking-[0.2em]">
+                <a href="index.html" class="text-slate-400 hover:text-slate-900 transition">Work</a>
+                <a href="about.html" class="text-slate-400 hover:text-slate-900 transition">About</a>
+                <a href="thinking.html" class="text-slate-400 hover:text-slate-900 transition">Thinking</a>
+                <a href="contact.html" class="text-slate-900 border-b-2 border-slate-900">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-48 pb-12 px-6 text-center">
+        <h1 class="text-4xl md:text-6xl mb-6">Connect</h1>
+        <p class="ui-font text-sm text-slate-500 tracking-widest uppercase">Let's build something clear and impactful.</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 pb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
-            <div class="grid md:grid-cols-3 gap-5">
-                <div class="strength-card">
-                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Product Planning & Prioritization</p>
-                    <p class="text-xs text-slate-500 leading-relaxed font-light">Roadmap development, feature prioritization, launch readiness, short vs. long-term trade-offs</p>
-                </div>
-                
-                <div class="strength-card">
-                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Cross-Functional Orchestration</p>
-                    <p class="text-xs text-slate-500 leading-relaxed font-light">Operating models, ownership clarity, executive communication</p>
-                </div>
+            <section>
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Name</label>
+                        <input type="text" name="name" class="contact-input" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Email</label>
+                        <input type="email" name="email" class="contact-input" placeholder="hello@company.com" required>
+                    </div>
+                    <div>
+                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Message</label>
+                        <textarea name="message" rows="5" class="contact-input" placeholder="How can I help?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-stormy w-full py-4 rounded-xl font-bold uppercase tracking-widest text-xs">Send Message</button>
+                </form>
+            </section>
 
-                <div class="strength-card">
-                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Monetization & Growth</p>
-                    <p class="text-xs text-slate-500 leading-relaxed font-light">Ads platforms, acquisition strategy, revenue impact</p>
-                </div>
-
-                <div class="strength-card">
-                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Operational Scale</p>
-                    <p class="text-xs text-slate-500 leading-relaxed font-light">Process design, workflow optimization, AI-enabled efficiency</p>
-                </div>
-
-                <div class="strength-card">
-                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Strategic Leadership</p>
-                    <p class="text-xs text-slate-500 leading-relaxed font-light">Direction setting, clear decision making under ambiguity</p>
-                </div>
-
-                <div class="strength-card">
-                    <p class="ui-font font-bold text-slate-700 text-sm mb-2 uppercase tracking-tight">Stakeholder Engagement</p>
-                    <p class="text-xs text-slate-500 leading-relaxed font-light">Trust building, team alignment, and accountability with senior partners</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="mt-40 reveal p-10 md:p-16 rounded-[40px]" style="background: var(--soft-frost);">
-            <h2 class="text-3xl mb-10 tracking-tight">My Approach</h2>
-            <div class="space-y-8">
-                <p class="text-xl md:text-2xl italic font-light text-slate-800 leading-relaxed">
-                    "I believe great program leadership is about creating clarity and accountability, and building trust across teams so people can move fast together."
-                </p>
-                <p class="text-lg text-slate-700 leading-relaxed font-light">
-                    When priorities, trade-offs, and success metrics are explicit, teams make better decisions. My job is to create clear strategies that drive both business and customer goals, align people around the work, reinforce ownership, and ensure teams understand the impact of what they’re building.
-                </p>
-            </div>
-        </section>
-
-        <section class="mt-40 reveal">
-            <h2 class="text-3xl mb-16 tracking-tight">The Journey</h2>
-            
-            <div class="space-y-20">
-                <div class="flex flex-col md:flex-row gap-6 md:gap-12">
-                    <div class="w-32 ui-font text-xs font-bold text-slate-400 pt-2 shrink-0 uppercase tracking-widest">2023 — 2025</div>
-                    <div class="flex items-start gap-6">
-                        <div class="logo-box"><img src="Directv logo.jpeg" alt="DIRECTV"></div>
+            <section class="flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl mb-8">Resources</h2>
+                    
+                    <a href="resume.pdf" download class="resume-box p-8 flex items-center justify-between mb-8 group">
                         <div>
-                            <h4 class="text-xl font-bold ui-font">DIRECTV</h4>
-                            <p class="role-title">Senior Product Marketer</p>
-                            <p class="text-slate-500 mt-4 leading-relaxed text-sm">Develop product strategies that drive targeted marketing tactics for acquiring new subscribers, leveraging cross-funnel advertising to optimize engagement and conversion.</p>
+                            <h3 class="text-xl font-bold mb-1">Download Resume</h3>
+                            <p class="text-sm text-slate-600">Latest PDF • 2026</p>
+                        </div>
+                        <div class="bg-white p-3 rounded-full shadow-sm group-hover:bg-slate-50 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        </div>
+                    </a>
+
+                    <div class="space-y-4">
+                        <p class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400">Find me online</p>
+                        <div class="flex gap-6">
+                            <a href="https://linkedin.com/in/nikki-schlesinger" target="_blank" class="text-slate-600 hover:text-[#384959] transition font-bold border-b border-slate-200">LinkedIn</a>
+                            <a href="mailto:nikki@example.com" class="text-slate-600 hover:text-[#384959] transition font-bold border-b border-slate-200">Email</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-6 md:gap-12">
-                    <div class="w-32 ui-font text-xs font-bold text-slate-400 pt-2 shrink-0 uppercase tracking-widest">2020 — 2022</div>
-                    <div class="flex items-start gap-6">
-                        <div class="logo-box"><img src="Spotify log.png" alt="Spotify"></div>
-                        <div>
-                            <h4 class="text-xl font-bold ui-font">Spotify Advertising</h4>
-                            <p class="role-title">Program Manager / Strategic Operations Lead</p>
-                            <p class="text-slate-500 mt-4 leading-relaxed text-sm">Led end-to-end strategy for large-scale advertising initiatives, overseeing 80+ partners to launch Spotify’s self-serve podcast ads platform and build the advertising product marketing site.</p>
-                        </div>
-                    </div>
+                <div class="mt-16 p-8 rounded-3xl border border-slate-100 bg-white">
+                    <p class="text-slate-500 italic leading-relaxed">
+                        "I operate comfortably in ambiguity and focus on aligning business impact with user experience."
+                    </p>
                 </div>
+            </section>
 
-                <div class="flex flex-col md:flex-row gap-6 md:gap-12">
-                    <div class="w-32 ui-font text-xs font-bold text-slate-400 pt-2 shrink-0 uppercase tracking-widest">2018 — 2020</div>
-                    <div class="flex items-start gap-6">
-                        <div class="logo-box"><img src="Comcast logo.png" alt="Comcast"></div>
-                        <div>
-                            <h4 class="text-xl font-bold ui-font">Comcast NBC Universal</h4>
-                            <p class="role-title">Program Manager, Experience Design</p>
-                            <p class="text-slate-500 mt-4 leading-relaxed text-sm">Led program management for the Xfinity Digital Home web and native applications.</p>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </main>
 
-                <div class="flex flex-col md:flex-row gap-6 md:gap-12">
-                    <div class="w-32 ui-font text-xs font-bold text-slate-400 pt-2 shrink-0 uppercase tracking-widest">2005 — 2017</div>
-                    <div class="flex items-start gap-6">
-                        <div class="logo-box"><img src="Amex Logo.avif" alt="Amex"></div>
-                        <div>
-                            <h4 class="text-xl font-bold ui-font">American Express</h4>
-                            <p class="role-title">Senior Product / Product Marketing</p>
-                            <p class="text-slate-500 mt-4 leading-relaxed text-sm">Over nearly a decade at American Express, led product strategy, digital innovation, and global expansion initiatives — launching new products and scaling acquisition platforms.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+</body>
+</html>
