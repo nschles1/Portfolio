@@ -10,15 +10,16 @@
         :root { 
             --deep-slate: #384959; 
             --amex-blue: #007bc1; 
-            --amex-gradient-light: #e6f2ff; 
+            --amex-gradient-light: #e6f2ff;
+            --bg-fade-target: #f8f9fa; /* Matches provided reference image background */
         }
         
         body { 
-            background-color: #ffffff; 
+            background-color: var(--bg-fade-target); 
             color: var(--deep-slate); 
             font-family: 'Noto Sans', sans-serif; 
-            /* Linear Gradient referencing Amex logo colors */
-            background: linear-gradient(180deg, var(--amex-gradient-light) 0%, #ffffff 600px);
+            /* Linear Gradient fading into custom reference color */
+            background: linear-gradient(180deg, var(--amex-gradient-light) 0%, var(--bg-fade-target) 600px);
             background-attachment: scroll;
         }
 
@@ -27,7 +28,6 @@
         
         .info-grid { border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05); padding: 40px 0; margin: 40px 0; }
         
-        /* Principle Cards with Glassmorphism */
         .principle-card {
             background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(8px);
@@ -36,7 +36,6 @@
             padding: 2rem;
         }
 
-        /* Impact & Results Styling from Spotify format */
         .impact-container {
             background-color: var(--deep-slate);
             color: white;
@@ -58,7 +57,6 @@
             font-weight: bold;
         }
 
-        /* Lessons Learned Vertical Bar */
         .lessons-quote {
             border-left: 4px solid #88BDF2;
             padding-left: 2rem;
@@ -159,11 +157,6 @@
         <p class="text-lg text-slate-600 font-light mb-12 leading-relaxed">
             As Product, Marketing, and Program Lead, I owned the strategy and end-to-end execution, balancing speed, scale, brand consistency, and regulatory rigor.
         </p>
-        
-        <div class="bg-white/40 p-4 rounded-[2.5rem] shadow-xl border border-white/60 mb-16">
-            <img src="Amex_Platinum.jpg" class="rounded-[2rem] w-full" alt="Amex Personalization Strategy">
-            <p class="text-center text-[10px] uppercase tracking-[0.3em] text-slate-400 mt-6">Dynamic Product Clarity & Value Proposition</p>
-        </div>
 
         <ul class="text-slate-600 font-light space-y-4 mb-20 text-lg">
             <li class="flex items-start"><span class="text-[#007bc1] mr-3 font-bold">→</span> Defined the acquisition strategy and customer experience vision.</li>
@@ -173,6 +166,11 @@
             <li class="flex items-start"><span class="text-[#007bc1] mr-3 font-bold">→</span> Partnered with 19 Card product owners to gather requirements and secure approvals.</li>
             <li class="flex items-start"><span class="text-[#007bc1] mr-3 font-bold">→</span> Led offer development and testing to improve conversion and product fit.</li>
         </ul>
+
+        <div class="bg-white/40 p-4 rounded-[2.5rem] shadow-xl border border-white/60 mb-16">
+            <img src="Amex_Platinum.jpg" class="rounded-[2rem] w-full" alt="Amex Personalization Strategy">
+            <p class="text-center text-[10px] uppercase tracking-[0.3em] text-slate-400 mt-6">Dynamic Product Clarity & Value Proposition</p>
+        </div>
     </section>
 
     <section class="py-12 px-6 max-w-5xl mx-auto mb-20">
@@ -180,7 +178,7 @@
             <h2 class="text-2xl mb-12 tracking-widest uppercase opacity-80" style="color: #88BDF2;">Impact & Results</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                 <ul class="impact-grid space-y-8 font-light text-lg">
-                    <li>Generated $3.5B in annual revenue.</li>
+                    <li>Contributed to $3.5B in annual revenue.</li>
                     <li>Acquired 700K new accounts annually.</li>
                 </ul>
                 <ul class="impact-grid space-y-8 font-light text-lg">
