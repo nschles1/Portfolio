@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bridge: Strategy to Execution | Nikki Schlesinger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Manrope:wght@300;500;700&family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep-slate: #384959;
+            --muted-blue: #6A89A7;
+            --clear-sky: #88BDF2;
+            --soft-frost: #BDDDFC;
+        }
+        body { 
+            background-color: #ffffff; 
+            color: var(--deep-slate); 
+            font-family: 'Noto Sans', sans-serif; 
+            line-height: 1.8;
+        }
+        h1, h2, .editorial-font { font-family: 'Aboreto', cursive; line-height: 1.3; }
+        h3, .ui-font { font-family: 'Manrope', sans-serif; }
+
+        .progress-container {
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+        }
+        .progress-bar {
+            height: 4px;
+            background: var(--clear-sky);
+            width: 0%;
+        }
+
+        .glass-nav { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(20px); }
+        
+        /* Typography for Article Body */
+        .article-content p { margin-bottom: 2rem; font-size: 1.125rem; color: #4A5568; }
+        .article-content h2 { font-size: 1.75rem; margin-top: 4rem; margin-bottom: 1.5rem; color: var(--deep-slate); letter-spacing: -0.02em; }
+        .article-content blockquote { 
+            border-left: 4px solid var(--soft-frost); 
+            padding-left: 2rem; 
+            margin: 4rem 0; 
+            font-style: italic; 
+            font-size: 1.5rem; 
+            color: var(--muted-blue);
+            line-height: 1.5;
+        }
+        .article-content ul { margin-bottom: 2rem; }
+        .article-content li { margin-bottom: 1rem; color: #4A5568; position: relative; padding-left: 1.5rem; }
+        .article-content li::before { content: "•"; color: var(--clear-sky); position: absolute; left: 0; font-weight: bold; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-100 px-6">
+        <div class="max-w-6xl mx-auto h-16 flex justify-between items-center">
+            <a href="index.html" class="editorial-font text-lg tracking-widest font-bold uppercase">Nikki Schlesinger</a>
+            <div class="hidden md:flex items-center gap-10 ui-font text-[11px] font-bold uppercase tracking-[0.2em]">
+                <a href="thinking.html" class="text-slate-400 hover:text-slate-900 transition">← Back to Thinking</a>
+                <a href="contact.html" class="px-5 py-2 rounded-full lowercase font-semibold tracking-normal hover:brightness-110 transition" style="background-color: var(--clear-sky); color: white;">contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="pt-40 pb-24">
+        <header class="max-w-3xl mx-auto px-6 mb-16 text-center">
+            <div class="flex items-center justify-center gap-4 mb-8">
+                <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-muted-blue">Operational Strategy</span>
+                <span class="text-slate-300">•</span>
+                <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">5 Min Read</span>
+            </div>
+            <h1 class="text-3xl md:text-5xl mb-8">The Bridge: How to Successfully Transition from Monetization Strategy to Product Execution</h1>
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center overflow-hidden">
+                    <span class="ui-font text-xs font-bold text-slate-400 uppercase">NS</span>
+                </div>
+                <div class="text-left">
+                    <p class="ui-font text-xs font-bold uppercase tracking-widest leading-none mb-1">Nikki Schlesinger</p>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest">Published Feb 2026</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="max-w-5xl mx-auto px-6 mb-20">
+            <div class="aspect-[21/9] bg-[var(--soft-frost)] rounded-[40px] flex items-center justify-center">
+                <p class="ui-font text-[10px] font-bold uppercase tracking-[0.3em] opacity-40">Operational Framework Visualization</p>
+            </div>
+        </div>
+
+        <div class="max-w-2xl mx-auto px-6 article-content">
+            <p class="text-xl font-light text-slate-500 mb-12">
+                Many organizations suffer from a "strategy-execution gap." Leadership defines a high-level monetization goal (e.g., "Increase ad yield by 20%"), but by the time it reaches the engineering backlog, the original intent is often lost in a sea of technical constraints.
+            </p>
+
+            <p>
+                As a Program Leader, my role is to act as the bridge—ensuring the "Why" (Strategy) and the "How" (Execution) stay perfectly aligned through every phase of the product lifecycle.
+            </p>
+
+            <h2>The Translation Layer: Success Metrics</h2>
+            <p>
+                Before a single line of code is written, you must translate the business goal into product KPIs. If the strategy is "Growth," does that mean new user acquisition, or reducing churn of high-value subscribers? 
+            </p>
+            <ul>
+                <li><strong>Identify the North Star:</strong> Map every feature request back to a business pillar.</li>
+                <li><strong>Define Trade-offs:</strong> Be explicit about what you are <em>not</em> doing to protect the primary goal.</li>
+            </ul>
+
+            
+
+            <h2>Mapping the Dependency Web</h2>
+            <p>
+                In complex environments like Spotify or DIRECTV, no product is an island. A change in the ad-server affects the client UI, which affects analytics, which affects sales reporting. Effective program leadership is about visualizing these invisible threads before they become blockers.
+            </p>
+
+            <blockquote>
+                "Clear accountability is the antidote to the friction caused by rapid change."
+            </blockquote>
+
+            <h2>The "Definition of Ready" for Execution</h2>
+            <p>
+                Execution fails when it starts too early. I implement a "Definition of Ready" (DoR) for programs. A project isn't ready for the roadmap until:
+            </p>
+            <ul>
+                <li>Stakeholder alignment is 100% (No "surprise" requirements mid-sprint).</li>
+                <li>Technical feasibility has been vetted by Engineering Leads.</li>
+                <li>The Go-To-Market (GTM) strategy is drafted and aligned with sales cycles.</li>
+            </ul>
+
+            <p>
+                By acting as the bridge, we ensure that the finished product doesn't just work—it actually moves the needle on the business goals that started the journey in the first place.
+            </p>
+        </div>
+
+        <footer class="max-w-3xl mx-auto px-6 mt-24 pt-16 border-t border-slate-100">
+            <div class="bg-slate-50 p-10 rounded-[32px] text-center">
+                <h3 class="text-xl font-bold mb-4">Enjoyed this perspective?</h3>
+                <p class="text-slate-500 mb-8 text-sm leading-relaxed">I write about product operations, team leadership, and strategy. Let's connect if you're building something interesting.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://linkedin.com/in/nikki-schlesinger" target="_blank" class="ui-font text-[10px] font-bold uppercase tracking-widest px-6 py-3 border border-slate-200 rounded-full bg-white hover:bg-slate-50 transition">LinkedIn</a>
+                    <a href="contact.html" class="ui-font text-[10px] font-bold uppercase tracking-widest px-6 py-3 bg-[var(--deep-slate)] text-white rounded-full hover:opacity-90 transition shadow-lg">Get in Touch</a>
+                </div>
+            </div>
+        </footer>
+    </article>
+
+    <footer class="py-12 bg-white text-center">
+        <p class="ui-font text-[10px] font-bold uppercase tracking-[0.3em] text-slate-300">© 2026 Nikki Schlesinger</p>
+    </footer>
+
+    <script>
+        window.onscroll = function() {moveProgressBar()};
+        function moveProgressBar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+</body>
+</html>
