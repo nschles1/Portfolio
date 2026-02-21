@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -17,13 +15,13 @@
             --muted-blue: #6A89A7;
             --clear-sky: #88BDF2;
             --soft-frost: #BDDDFC;
+            --stormy-teal: #5D6D7E; /* New executive accent */
         }
         body { background-color: #F8FAFC; color: var(--deep-slate); font-family: 'Noto Sans', sans-serif; }
         h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
         h3, .ui-font { font-family: 'Manrope', sans-serif; }
         .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
         
-        /* Mobile Menu Animation */
         #mobile-menu {
             transition: all 0.3s ease-in-out;
             max-height: 0;
@@ -45,13 +43,13 @@
             <a href="index.html" class="editorial-font text-lg tracking-widest font-bold uppercase">Nikki Schlesinger</a>
             
             <div class="hidden md:flex items-center gap-10 ui-font text-[11px] font-bold uppercase tracking-[0.2em]">
-                <a href="index.html" class="text-slate-400 hover:text-slate-900 transition">Work</a>
+                <a href="index.html" class="text-slate-900 transition">Work</a>
                 <a href="about.html" class="text-slate-400 hover:text-slate-900 transition">About</a>
                 <a href="thinking.html" class="text-slate-400 hover:text-slate-900 transition">Thinking</a>
                 <a href="contact.html" class="text-slate-400 hover:text-slate-900 transition">Contact</a>
             </div>
 
-            <button id="menu-toggle" class="md:hidden text-slate-900 focus:outline-none p-2" aria-label="Toggle Menu">
+            <button id="menu-toggle" class="md:hidden text-slate-900 p-2">
                 <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
@@ -66,26 +64,7 @@
         </div>
     </nav>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.getElementById('menu-toggle');
-            const menu = document.getElementById('mobile-menu');
-
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('active');
-                // Optional: Change icon from hamburger to X when active
-                const icon = btn.querySelector('svg');
-                if (menu.classList.contains('active')) {
-                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />';
-                } else {
-                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />';
-                }
-            });
-        });
-    </script>
-
-    <section class="pt-48 pb-20 px-6 max-w-6xl mx-auto">
-    <div class="reveal">
+    <section class="pt-48 pb-32 px-6 max-w-6xl mx-auto">
         <h1 class="text-5xl md:text-7xl font-light mb-10 leading-[1.1] tracking-tight">
             Bridging the gap between <br>
             <span class="editorial-font italic text-[var(--muted-blue)]">Strategy & Execution.</span>
@@ -96,107 +75,122 @@
         
         <div class="flex flex-wrap gap-6">
             <a href="about.html" 
-               class="px-10 py-4 rounded-full ui-font text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-100"
-               style="background-color: var(--clear-sky); color: white;">
+               class="px-10 py-4 rounded-full ui-font text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-100 flex items-center justify-center bg-[var(--stormy-teal)] text-white">
                 About Me
-          
+            </a>
         </div>
     </section>
 
-<section id="work" class="py-24 px-6 bg-[#F8FAFC]">
-    <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl mb-12 tracking-[0.2em] text-[#384959] border-b border-slate-200 pb-4 w-fit" style="font-family: 'Aboreto', cursive; text-transform: uppercase;">Work Highlights</h2>
+    <section id="work" class="py-24 px-6 bg-[#F8FAFC]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl mb-12 tracking-[0.2em] text-[#384959] border-b border-slate-200 pb-4 w-fit uppercase">Work Highlights</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
-            
-            <a href="work-spotify-podcasts.html" class="md:col-span-7 group relative bg-[#384959] rounded-[3rem] p-10 flex flex-col justify-between min-h-[380px] transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
-                <div>
-                    <p class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[#88BDF2] mb-4">Launch & Scale</p>
-                    <h3 class="text-white text-2xl font-bold mb-4 leading-tight">Spotify Advertising: Podcast Advertising in Ad Studio</h3>
-                    <p class="text-slate-300 text-sm max-w-md font-light leading-relaxed">Directing an 80+ person cross-functional team to launch Spotify's newest advertising vertical and $1.4B revenue driver.</p>
-                </div>
-                <div class="flex items-center gap-3">
-                    <img src="Spotify%20log.png" class="w-7 h-7 object-contain" alt="Spotify">
-                    <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">View Case Study →</span>
-                </div>
-            </a>
-
-            <a href="work-amex.html" class="md:col-span-5 group relative bg-white rounded-[3rem] p-10 flex flex-col justify-between border border-slate-100 shadow-sm min-h-[380px] transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
-                <div>
-                    <p class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[#6A89A7] mb-4">Fintech / Acquisition</p>
-                    <h3 class="text-[#384959] text-xl font-bold mb-3 leading-tight">Scaling Digital Customer Acquisition at American Express</h3>
-                    <p class="text-slate-500 text-sm font-light leading-relaxed">Owning the primary digital engine for acquiring new Card Members and driving growth at scale.</p>
-                </div>
-                <div class="flex items-center gap-3">
-                    <img src="Amex%20Logo.avif" class="w-8 h-8 object-contain" alt="Amex">
-                    <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">View Case Study →</span>
-                </div>
-            </a>
-            
-               <a href="work-directv.html" class="md:col-span-5 group relative bg-[#D1E5F9] rounded-[3rem] p-10 flex flex-col justify-between min-h-[380px] transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
-    <div>
-        <p class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[#384959]/60 mb-4">Product Marketing</p>
-        <h3 class="text-[#384959] text-xl font-bold mb-4">DIRECTV: Customer Acquisition</h3>
-        <p class="text-[#384959]/80 text-sm font-light leading-relaxed">Repositioning a legacy satellite brand for streaming-first growth and margin optimization.</p>
-    </div>
-    <div class="flex items-center gap-3">
-        <img src="DIRECTV_Logo_jpeg" class="h-8 w-8 object-contain rounded-lg" alt="DIRECTV">
-        <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[#384959]/60">View Case Study →</span>
-    </div>
-            </a>
-
-            <a href="work-spotify-platform.html" class="md:col-span-7 group relative bg-white rounded-[3rem] p-10 flex flex-col justify-between border border-slate-100 shadow-sm min-h-[380px] transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
-                <div>
-                    <p class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[#6A89A7] mb-4">GTM Strategy</p>
-                    <h3 class="text-[#384959] text-2xl font-bold mb-4">Spotify Advertising: Ad Marketing Platform</h3>
-                    <p class="text-slate-500 text-sm font-light leading-relaxed">Operationalizing the end-to-end delivery of a global marketing platform to scale SMB acquisition.</p>
-                </div>
-                <div class="flex items-center gap-3">
-                    <img src="Spotify%20log.png" class="w-7 h-7 object-contain" alt="Spotify">
-                    <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">View Case Study →</span>
-                </div>
-            </a>
-
-        </div>
-   
-</section>
-
-<section class="mt-40 mb-20 reveal">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="p-10 md:p-16 rounded-[40px]" style="background: var(--soft-frost);">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
-                <div>
-                    <h2 class="text-3xl tracking-tight mb-2">Recent Thinking</h2>
-                    <p class="text-slate-600 ui-font text-sm uppercase tracking-widest">Perspectives on Strategy & Operations</p>
-                </div>
-                <a href="thinking.html" class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] border-b-2 border-slate-900 pb-1 hover:text-[var(--muted-blue)] hover:border-[var(--muted-blue)] transition">
-                    View All Articles —&gt;
-                </a>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8">
-                <a href="the-bridge.html" class="group block bg-white p-8 rounded-3xl border border-slate-100 hover:border-[var(--clear-sky)] transition-all duration-300">
-                    <span class="ui-font text-[10px] font-bold uppercase tracking-widest text-[var(--muted-blue)] mb-4 block">Operational Strategy</span>
-                    <h3 class="text-xl font-bold mb-4 group-hover:text-[var(--muted-blue)] transition">The Bridge: Transitioning from Strategy to Execution</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed mb-6">How to ensure business intent isn't lost when translating goals into engineering backlogs.</p>
-                    <span class="text-[10px] font-bold ui-font uppercase tracking-widest group-hover:translate-x-2 transition-transform inline-block">Read More —&gt;</span>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+                
+                <a href="work-spotify-podcasts.html" class="md:col-span-7 group relative bg-[#384959] rounded-[3rem] p-10 flex flex-col justify-between min-h-[380px] transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+                    <div>
+                        <p class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[#88BDF2] mb-4">Launch & Scale</p>
+                        <h3 class="text-white text-2xl font-bold mb-4 leading-tight">Spotify Advertising: Podcast Advertising in Ad Studio</h3>
+                        <p class="text-slate-300 text-sm max-w-md font-light leading-relaxed">Directing an 80+ person cross-functional team to launch Spotify's newest advertising vertical and $1.4B revenue driver.</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <img src="Spotify%20log.png" class="w-7 h-7 object-contain" alt="Spotify">
+                        <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-white/60">View Case Study →</span>
+                    </div>
                 </a>
 
-                <a href="ai-in-program-ops.html" class="group block bg-white p-8 rounded-3xl border border-slate-100 hover:border-[var(--clear-sky)] transition-all duration-300">
-                    <span class="ui-font text-[10px] font-bold uppercase tracking-widest text-[var(--muted-blue)] mb-4 block">AI & Automation</span>
-                    <h3 class="text-xl font-bold mb-4 group-hover:text-[var(--muted-blue)] transition">AI in Program Ops: Using LLMs for Efficiency</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Exploring practical ways to automate the "coordination tax" using Large Language Models.</p>
-                    <span class="text-[10px] font-bold ui-font uppercase tracking-widest group-hover:translate-x-2 transition-transform inline-block">Read More —&gt;</span>
+                <a href="work-amex.html" class="md:col-span-5 group relative bg-white rounded-[3rem] p-10 flex flex-col justify-between border border-slate-100 shadow-sm min-h-[380px] transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                    <div>
+                        <p class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[#6A89A7] mb-4">Fintech / Acquisition</p>
+                        <h3 class="text-[#384959] text-xl font-bold mb-3 leading-tight">Scaling Digital Customer Acquisition at American Express</h3>
+                        <p class="text-slate-500 text-sm font-light leading-relaxed">Owning the primary digital engine for acquiring new Card Members and driving growth at scale.</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <img src="Amex%20Logo.avif" class="w-8 h-8 object-contain" alt="Amex">
+                        <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">View Case Study →</span>
+                    </div>
+                </a>
+                
+                <a href="work-directv.html" class="md:col-span-5 group relative bg-[#D1E5F9] rounded-[3rem] p-10 flex flex-col justify-between min-h-[380px] transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                    <div>
+                        <p class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[#384959]/60 mb-4">Product Marketing</p>
+                        <h3 class="text-[#384959] text-xl font-bold mb-4">DIRECTV: Customer Acquisition</h3>
+                        <p class="text-[#384959]/80 text-sm font-light leading-relaxed">Repositioning a legacy satellite brand for streaming-first growth and margin optimization.</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <img src="Directv logo.jpeg" class="h-8 w-8 object-contain rounded-lg shadow-sm" alt="DIRECTV">
+                        <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[#384959]/60">View Case Study →</span>
+                    </div>
+                </a>
+
+                <a href="work-spotify-platform.html" class="md:col-span-7 group relative bg-white rounded-[3rem] p-10 flex flex-col justify-between border border-slate-100 shadow-sm min-h-[380px] transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                    <div>
+                        <p class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[#6A89A7] mb-4">GTM Strategy</p>
+                        <h3 class="text-[#384959] text-2xl font-bold mb-4">Spotify Advertising: Ad Marketing Platform</h3>
+                        <p class="text-slate-500 text-sm font-light leading-relaxed">Operationalizing the end-to-end delivery of a global marketing platform to scale SMB acquisition.</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <img src="Spotify%20log.png" class="w-7 h-7 object-contain" alt="Spotify">
+                        <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">View Case Study →</span>
+                    </div>
                 </a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="mt-40 mb-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="p-10 md:p-16 rounded-[40px] bg-[var(--soft-frost)]">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+                    <div>
+                        <h2 class="text-3xl tracking-tight mb-2">Recent Thinking</h2>
+                        <p class="text-slate-600 ui-font text-sm uppercase tracking-widest">Perspectives on Strategy & Operations</p>
+                    </div>
+                    <a href="thinking.html" class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] border-b-2 border-slate-900 pb-1 hover:text-[var(--muted-blue)] hover:border-[var(--muted-blue)] transition">
+                        View All Articles —>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <a href="the-bridge.html" class="group block bg-white p-8 rounded-3xl border border-slate-100 hover:border-[var(--clear-sky)] transition-all duration-300">
+                        <span class="ui-font text-[10px] font-bold uppercase tracking-widest text-[var(--muted-blue)] mb-4 block">Operational Strategy</span>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-[var(--muted-blue)] transition">The Bridge: Transitioning from Strategy to Execution</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">How to ensure business intent isn't lost when translating goals into engineering backlogs.</p>
+                        <span class="text-[10px] font-bold ui-font uppercase tracking-widest group-hover:translate-x-2 transition-transform inline-block">Read More —></span>
+                    </a>
+
+                    <a href="ai-in-program-ops.html" class="group block bg-white p-8 rounded-3xl border border-slate-100 hover:border-[var(--clear-sky)] transition-all duration-300">
+                        <span class="ui-font text-[10px] font-bold uppercase tracking-widest text-[var(--muted-blue)] mb-4 block">AI & Automation</span>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-[var(--muted-blue)] transition">AI in Program Ops: Using LLMs for Efficiency</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">Exploring practical ways to automate the "coordination tax" using Large Language Models.</p>
+                        <span class="text-[10px] font-bold ui-font uppercase tracking-widest group-hover:translate-x-2 transition-transform inline-block">Read More —></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <footer class="py-24 text-center border-t border-slate-200 bg-white">
         <h2 class="text-3xl md:text-4xl mb-10 editorial-font">Let's connect</h2>
         <a href="contact.html" class="ui-font text-xs font-bold uppercase tracking-[0.3em] text-slate-400 hover:text-slate-900 transition">Get in touch →</a>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('menu-toggle');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('active');
+                const icon = btn.querySelector('svg');
+                if (menu.classList.contains('active')) {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />';
+                } else {
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />';
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
