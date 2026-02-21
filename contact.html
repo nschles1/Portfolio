@@ -1,135 +1,83 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Nikki Schlesinger</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Manrope:wght@300;500;700&family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --deep-slate: #384959;
-            --muted-blue: #6A89A7;
-            --clear-sky: #88BDF2;
-            --soft-frost: #BDDDFC;
-        }
-        body { 
-            background-color: #F8FAFC; 
-            color: var(--deep-slate); 
-            font-family: 'Noto Sans', sans-serif; 
-        }
-        h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
-        h3, .ui-font { font-family: 'Manrope', sans-serif; }
+<section class="pt-48 pb-32 px-6 max-w-4xl mx-auto">
+    <div id="form-container">
+        <h1 class="text-4xl md:text-6xl mb-8 editorial-font">Get in touch</h1>
+        <p class="text-slate-500 text-lg mb-12 font-light">
+            Have a project in mind or looking to scale your program operations? Reach out and let's build something together.
+        </p>
 
-        .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
-        
-        .contact-input {
-            background: white;
-            border: 1px solid rgba(56, 73, 89, 0.1);
-            border-radius: 12px;
-            padding: 1rem;
-            width: 100%;
-            transition: all 0.3s ease;
-        }
-        .contact-input:focus {
-            outline: none;
-            border-color: var(--clear-sky);
-            box-shadow: 0 0 0 4px rgba(136, 189, 242, 0.1);
-        }
-        .btn-stormy {
-            background-color: var(--clear-sky);
-            color: white;
-            font-family: 'Manrope', sans-serif;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .btn-stormy:hover {
-            background-color: var(--muted-blue);
-            transform: translateY(-2px);
-        }
-        .resume-box {
-            background: var(--soft-frost);
-            border-radius: 32px;
-            transition: transform 0.3s ease;
-        }
-        .resume-box:hover {
-            transform: scale(1.02);
-        }
-    </style>
-</head>
-<body class="antialiased">
-
-    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 px-6">
-        <div class="max-w-6xl mx-auto h-16 flex justify-between items-center">
-            <a href="index.html" class="editorial-font text-lg tracking-widest font-bold uppercase">Nikki Schlesinger</a>
-            <div class="hidden md:flex items-center gap-10 ui-font text-[11px] font-bold uppercase tracking-[0.2em]">
-                <a href="index.html" class="text-slate-400 hover:text-slate-900 transition">Work</a>
-                <a href="about.html" class="text-slate-400 hover:text-slate-900 transition">About</a>
-                <a href="thinking.html" class="text-slate-400 hover:text-slate-900 transition">Thinking</a>
-                <a href="contact.html" class="text-slate-900 border-b-2 border-slate-900">Contact</a>
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-2">
+                    <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400">Name</label>
+                    <input type="text" name="name" required class="w-full bg-transparent border-b border-slate-200 py-3 focus:border-[var(--muted-blue)] outline-none transition">
+                </div>
+                <div class="space-y-2">
+                    <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400">Email</label>
+                    <input type="email" name="email" required class="w-full bg-transparent border-b border-slate-200 py-3 focus:border-[var(--muted-blue)] outline-none transition">
+                </div>
             </div>
+            <div class="space-y-2">
+                <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400">Message</label>
+                <textarea name="message" rows="4" required class="w-full bg-transparent border-b border-slate-200 py-3 focus:border-[var(--muted-blue)] outline-none transition"></textarea>
+            </div>
+            <button type="submit" id="submit-btn" class="px-12 py-4 rounded-full bg-[var(--deep-slate)] text-white ui-font text-xs font-bold uppercase tracking-[0.2em] hover:scale-105 transition-all shadow-lg shadow-slate-200">
+                Send Message
+            </button>
+        </form>
+    </div>
+
+    <div id="success-message" class="hidden text-center py-20">
+        <div class="w-20 h-20 bg-[var(--soft-frost)] rounded-full flex items-center justify-center mx-auto mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="var(--muted-blue)" class="w-10 h-10">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
         </div>
-    </nav>
+        <h2 class="text-3xl md:text-4xl mb-4 editorial-font">Message Received</h2>
+        <p class="text-slate-500 text-lg font-light max-w-md mx-auto mb-10">
+            Thank you for reaching out. I’ve received your message and will get back to you within 24–48 hours.
+        </p>
+        <a href="index.html" class="ui-font text-[10px] font-bold uppercase tracking-widest border-b-2 border-slate-900 pb-1 hover:text-[var(--muted-blue)] hover:border-[var(--muted-blue)] transition">
+            Back to Home
+        </a>
+    </div>
+</section>
 
-    <header class="pt-48 pb-12 px-6 text-center">
-        <h1 class="text-4xl md:text-6xl mb-6">Connect</h1>
-        <p class="ui-font text-sm text-slate-500 tracking-widest uppercase">Let's build something clear and impactful.</p>
-    </header>
+<script>
+    const form = document.getElementById("contact-form");
+    const formContainer = document.getElementById("form-container");
+    const successMessage = document.getElementById("success-message");
+    const submitBtn = document.getElementById("submit-btn");
 
-    <main class="max-w-5xl mx-auto px-6 pb-32">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            
-            <section>
-                <form action="https://formspree.io/f/mqeddzpo" method="POST" class="space-y-6">
-                    <div>
-                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Name</label>
-                        <input type="text" name="name" class="contact-input" placeholder="Your Name" required>
-                    </div>
-                    <div>
-                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Email</label>
-                        <input type="email" name="email" class="contact-input" placeholder="hello@company.com" required>
-                    </div>
-                    <div>
-                        <label class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-2">Message</label>
-                        <textarea name="message" rows="5" class="contact-input" placeholder="How can I help?" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-stormy w-full py-4 rounded-xl font-bold uppercase tracking-widest text-xs">Send Message</button>
-               <input type="hidden" name="_next" value="https://yourdomain.com/success.html">
-                </form>
-            </section>
+    async function handleSubmit(event) {
+      event.preventDefault();
+      submitBtn.innerHTML = "Sending...";
+      submitBtn.disabled = true;
 
-            <section class="flex flex-col justify-between">
-                <div>
-                    <h2 class="text-2xl mb-8">Resources</h2>
-                    
-                    <a href="Nikki Schlesinger Resume.pdf" download class="resume-box p-8 flex items-center justify-between mb-8 group">
-                        <div>
-                            <h3 class="text-xl font-bold mb-1">Download Resume</h3>
-                            <p class="text-sm text-slate-600">Latest PDF • 2026</p>
-                        </div>
-                        <div class="bg-white p-3 rounded-full shadow-sm group-hover:bg-slate-50 transition">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-                        </div>
-                    </a>
-
-                    <div class="space-y-4">
-                        <p class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-400">Find me online</p>
-                        <div class="flex gap-6">
-                            <a href="https://linkedin.com/in/nikki-schlesinger" target="_blank" class="text-slate-600 hover:text-[#384959] transition font-bold border-b border-slate-200">LinkedIn</a>
-                            <a href="mailto:nikki.schlesinger@gmail.com" class="text-slate-600 hover:text-[#384959] transition font-bold border-b border-slate-200">Email</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-16 p-8 rounded-3xl border border-slate-100 bg-white">
-                    <p class="text-slate-500 italic leading-relaxed">
-                        "I operate comfortably in ambiguity and focus on aligning business impact with user experience."
-                    </p>
-                </div>
-            </section>
-
-        </div>
-    </main>
-
-</body>
-</html>
+      const data = new FormData(event.target);
+      
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          formContainer.classList.add("hidden");
+          successMessage.classList.remove("hidden");
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              alert(data["errors"].map(error => error["message"]).join(", "));
+            } else {
+              alert("Oops! There was a problem submitting your form");
+            }
+          })
+        }
+      }).catch(error => {
+        alert("Oops! There was a problem submitting your form");
+      });
+    }
+    
+    form.addEventListener("submit", handleSubmit)
+</script>
