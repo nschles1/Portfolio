@@ -18,7 +18,6 @@
         h3, .ui-font { font-family: 'Manrope', sans-serif; }
         .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
         
-        /* Strength Card Styling */
         .strength-card {
             background: white;
             padding: 2.5rem;
@@ -28,11 +27,16 @@
         }
         .strength-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px -10px rgba(56, 73, 89, 0.1); }
         
-        /* Approach Box Styling */
         .approach-box {
-            background-color: #D1E7FB; /* Matching the light blue in your reference image */
+            background-color: #D1E7FB;
             border-radius: 48px;
             padding: 4rem 3rem;
+        }
+
+        /* Force 3-line headline layout */
+        .headline-grid {
+            display: block;
+            line-height: 1.1;
         }
     </style>
 </head>
@@ -51,14 +55,16 @@
     </nav>
 
     <header class="pt-48 pb-20 px-6 max-w-5xl mx-auto">
-        <h1 class="text-4xl md:text-7xl mb-12 leading-[1.1]">
-            PRODUCT AND PROGRAM LEADER <br>
-            <span class="text-[var(--muted-blue)]">TURNING STRATEGY</span> INTO <br>
+        <h1 class="text-4xl md:text-7xl mb-12 headline-grid">
+            PRODUCT AND PROGRAM LEADER<br>
+            <span class="text-[var(--muted-blue)]">TURNING STRATEGY</span> INTO<br>
             STRUCTURED EXECUTION
         </h1>
-        <div class="max-w-3xl space-y-8 text-lg md:text-xl text-slate-600 font-light leading-relaxed">
+        <div class="max-w-4xl space-y-8 text-lg md:text-xl text-slate-600 font-light leading-relaxed">
             <p>I've spent 15+ years at the intersection of product strategy, ad tech, and operations, building scalable systems and frameworks that enable complex, cross-functional teams to move fast together.</p>
-            <p>From leading the launch of Podcast Advertising on Spotify's self-serve Ad Platform and building their first advertiser-facing marketing website, to launching new products and scaling acquisition platforms and bringing 0→1 products to market at American Express, to driving subscriber growth in the CTV space at DIRECTV, the through-line has always been the same: turn ambiguity into clarity, and strategy into structured execution.</p>
+            
+            <p>From leading the launch of <strong>Podcast Advertising on Spotify's self-serve Ad Platform</strong> and building their <strong>first advertiser-facing marketing website</strong>, to <strong>scaling acquisition platforms and bringing 0→1 products to market at American Express</strong>, to <strong>driving subscriber growth in the CTV space at DIRECTV</strong>, the through-line has always been the same: turn ambiguity into clarity, and strategy into structured execution.</p>
+            
             <p>Along the way, I've found that the best work happens when teams are energized, aligned, and genuinely excited about what they're building — because great products that make a real difference in people's lives are worth having fun creating.</p>
         </div>
     </header>
@@ -66,27 +72,27 @@
     <section class="py-24 px-6 max-w-6xl mx-auto">
         <h2 class="editorial-font text-3xl mb-16 text-center tracking-widest uppercase">Core Strengths</h2>
         <div class="grid md:grid-cols-3 gap-6">
-            <div class="strength-card">
+            <div class="strength-card text-center md:text-left">
                 <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Product Planning & Prioritization</h3>
                 <p class="text-slate-500 text-sm leading-relaxed">Roadmap development, feature prioritization, launch readiness, short vs. long-term trade-offs</p>
             </div>
-            <div class="strength-card">
+            <div class="strength-card text-center md:text-left">
                 <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Cross-Functional Orchestration</h3>
                 <p class="text-slate-500 text-sm leading-relaxed">Operating models, ownership clarity, executive communication</p>
             </div>
-            <div class="strength-card">
+            <div class="strength-card text-center md:text-left">
                 <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Monetization & Growth</h3>
                 <p class="text-slate-500 text-sm leading-relaxed">Ads platforms, acquisition strategy, revenue impact</p>
             </div>
-            <div class="strength-card">
+            <div class="strength-card text-center md:text-left">
                 <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Operational Scale</h3>
                 <p class="text-slate-500 text-sm leading-relaxed">Process design, workflow optimization, AI-enabled efficiency</p>
             </div>
-            <div class="strength-card">
+            <div class="strength-card text-center md:text-left">
                 <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Strategic Leadership</h3>
                 <p class="text-slate-500 text-sm leading-relaxed">Direction setting, clear decision making under ambiguity</p>
             </div>
-            <div class="strength-card">
+            <div class="strength-card text-center md:text-left">
                 <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Stakeholder Engagement</h3>
                 <p class="text-slate-500 text-sm leading-relaxed">Trust building, team alignment, and accountability with senior partners</p>
             </div>
@@ -116,7 +122,7 @@
                 <div class="w-24 shrink-0 text-slate-400 ui-font text-xs font-bold pt-2">2023 — 2025</div>
                 <div class="flex-1">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center p-2 border border-slate-100">
+                        <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center p-2 border border-slate-100 overflow-hidden">
                             <img src="Directv logo.jpeg" alt="DIRECTV" class="max-w-full">
                         </div>
                         <div>
@@ -132,7 +138,7 @@
                 <div class="w-24 shrink-0 text-slate-400 ui-font text-xs font-bold pt-2">2020 — 2022</div>
                 <div class="flex-1">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center p-2 border border-slate-100">
+                        <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center p-2 border border-slate-100 overflow-hidden">
                             <img src="spotify-logo.png" alt="Spotify" class="max-w-full">
                         </div>
                         <div>
@@ -148,7 +154,7 @@
                 <div class="w-24 shrink-0 text-slate-400 ui-font text-xs font-bold pt-2">2018 — 2020</div>
                 <div class="flex-1">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center p-2 border border-slate-100">
+                        <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center p-2 border border-slate-100 overflow-hidden">
                             <img src="comcast-logo.png" alt="Comcast" class="max-w-full">
                         </div>
                         <div>
@@ -164,7 +170,7 @@
                 <div class="w-24 shrink-0 text-slate-400 ui-font text-xs font-bold pt-2">2005 — 2017</div>
                 <div class="flex-1">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center p-2 border border-slate-100">
+                        <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center p-2 border border-slate-100 overflow-hidden">
                             <img src="amex-logo.png" alt="American Express" class="max-w-full">
                         </div>
                         <div>
@@ -179,12 +185,12 @@
     </section>
 
     <section class="py-32 px-6 text-center">
-        <div class="max-w-2xl mx-auto">
-            <p class="text-slate-500 text-lg mb-12 font-light italic">
+        <div class="max-w-2xl mx-auto flex flex-col items-center">
+            <p class="text-slate-500 text-lg mb-8 font-light italic">
                 I'm currently open to Senior Product Manager and Program Manager roles — particularly in ad tech, CTV, or platforms where operational scale and strategic clarity matter.
             </p>
-            <a href="contact.html" class="inline-block px-12 py-4 bg-[var(--deep-slate)] text-white ui-font text-xs font-bold uppercase tracking-widest rounded-full hover:scale-105 transition shadow-lg">
-                Get in touch →
+            <a href="contact.html" class="ui-font text-sm md:text-xl font-medium tracking-[0.3em] uppercase text-[var(--muted-blue)] hover:text-[var(--deep-slate)] transition-all flex items-center gap-4">
+                Get in touch <span class="text-2xl">→</span>
             </a>
         </div>
     </section>
