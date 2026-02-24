@@ -17,15 +17,22 @@
         h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
         h3, .ui-font { font-family: 'Manrope', sans-serif; }
         .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
-        .journey-line { position: relative; }
-        .journey-line::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: linear-gradient(to bottom, var(--clear-sky), transparent);
+        
+        /* Strength Card Styling */
+        .strength-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        .strength-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px -10px rgba(56, 73, 89, 0.1); }
+        
+        /* Approach Box Styling */
+        .approach-box {
+            background-color: #D1E7FB; /* Matching the light blue in your reference image */
+            border-radius: 48px;
+            padding: 4rem 3rem;
         }
     </style>
 </head>
@@ -43,107 +50,45 @@
         </div>
     </nav>
 
-    <main class="pt-48 pb-32 px-6 max-w-4xl mx-auto">
-        <section class="mb-20">
-            <h1 class="text-4xl md:text-6xl mb-10 leading-tight">
-                Product and Program leader turning <br>
-                <span class="italic text-[var(--muted-blue)]">strategy into structured execution.</span>
-            </h1>
-            <div class="space-y-6 text-lg text-slate-600 font-light leading-relaxed">
-                <p>
-                    I've spent 15+ years at the intersection of product strategy, ad tech, and operations, building scalable systems and frameworks that enable complex, cross-functional teams to move fast together.
-                </p>
-                <p>
-                    From leading the launch of Podcast Advertising on Spotify's self-serve Ad Platform and building their first advertiser-facing marketing website, to launching new products and scaling acquisition platforms and bringing 0→1 products to market at American Express, to driving subscriber growth in the CTV space at DIRECTV, the through-line has always been the same: turn ambiguity into clarity, and strategy into structured execution.
-                </p>
-                <p>
-                    Along the way, I've found that the best work happens when teams are energized, aligned, and genuinely excited about what they're building — because great products that make a real difference in people's lives are worth having fun creating.
-                </p>
+    <header class="pt-48 pb-20 px-6 max-w-5xl mx-auto">
+        <h1 class="text-4xl md:text-7xl mb-12 leading-[1.1]">
+            PRODUCT AND PROGRAM LEADER <br>
+            <span class="text-[var(--muted-blue)]">TURNING STRATEGY</span> INTO <br>
+            STRUCTURED EXECUTION
+        </h1>
+        <div class="max-w-3xl space-y-8 text-lg md:text-xl text-slate-600 font-light leading-relaxed">
+            <p>I've spent 15+ years at the intersection of product strategy, ad tech, and operations, building scalable systems and frameworks that enable complex, cross-functional teams to move fast together.</p>
+            <p>From leading the launch of Podcast Advertising on Spotify's self-serve Ad Platform and building their first advertiser-facing marketing website, to launching new products and scaling acquisition platforms and bringing 0→1 products to market at American Express, to driving subscriber growth in the CTV space at DIRECTV, the through-line has always been the same: turn ambiguity into clarity, and strategy into structured execution.</p>
+            <p>Along the way, I've found that the best work happens when teams are energized, aligned, and genuinely excited about what they're building — because great products that make a real difference in people's lives are worth having fun creating.</p>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="editorial-font text-3xl mb-16 text-center tracking-widest uppercase">Core Strengths</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="strength-card">
+                <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Product Planning & Prioritization</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Roadmap development, feature prioritization, launch readiness, short vs. long-term trade-offs</p>
             </div>
-        </section>
-
-        <hr class="border-slate-200 mb-20">
-
-        <section class="mb-32">
-            <h2 class="text-sm font-bold uppercase tracking-[0.3em] text-slate-400 mb-12">My Approach</h2>
-            <div class="grid md:grid-cols-12 gap-12">
-                <div class="md:col-span-5">
-                    <p class="editorial-font text-2xl italic text-[var(--muted-blue)] leading-snug">
-                        “I believe great program leadership is about creating clarity and accountability, and building trust across teams so people can move fast together."
-                    </p>
-                </div>
-                <div class="md:col-span-7 space-y-6 text-slate-600 font-light leading-relaxed">
-                    <p>
-                        When priorities, trade-offs, and success metrics are explicit, teams make better decisions. My job is to create clear strategies that drive both business and customer goals, align people around the work, reinforce ownership, and ensure teams understand the impact of what they're building.
-                    </p>
-                    <p>
-                        The principle I keep coming back to: create meaningful products that genuinely delight consumers, with a team that finds real satisfaction in the everyday challenge of bringing those products to life. After 15+ years, I've learned that the teams who care deeply about both the product and the people building it are the ones who create something truly worth using.
-                    </p>
-                    <p>
-                        I'm also actively learning and integrating AI tools into how I work — from streamlining planning workflows to improving how I synthesize insights and communicate strategy, to building this portfolio. In a field where operational efficiency is a competitive advantage, I think about AI as a force multiplier for the work, not a replacement for judgment.
-                    </p>
-                </div>
+            <div class="strength-card">
+                <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Cross-Functional Orchestration</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Operating models, ownership clarity, executive communication</p>
             </div>
-        </section>
-
-        <section class="mb-32">
-            <h2 class="text-sm font-bold uppercase tracking-[0.3em] text-slate-400 mb-16 text-center">The Journey</h2>
-            <div class="space-y-16">
-                <div class="grid md:grid-cols-12 gap-8 journey-line pl-8">
-                    <div class="md:col-span-4">
-                        <p class="ui-font text-[10px] font-bold text-[var(--muted-blue)] uppercase tracking-widest">2023 — 2025</p>
-                        <h3 class="text-xl font-bold mt-2">DIRECTV</h3>
-                        <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Senior Product Marketing Manager</p>
-                    </div>
-                    <div class="md:col-span-8 text-slate-500 font-light leading-relaxed">
-                        Led campaign strategy, go-to-market execution, and cross-funnel advertising to drive 220K+ new subscribers quarterly in the Connected TV space — shifting product mix toward higher-margin streaming products and increasing streaming product awareness by 35%.
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-12 gap-8 journey-line pl-8">
-                    <div class="md:col-span-4">
-                        <p class="ui-font text-[10px] font-bold text-[var(--muted-blue)] uppercase tracking-widest">2020 — 2022</p>
-                        <h3 class="text-xl font-bold mt-2">Spotify Advertising</h3>
-                        <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Program Manager / Strategic Operations Lead</p>
-                    </div>
-                    <div class="md:col-span-8 text-slate-500 font-light leading-relaxed">
-                        Led end-to-end product planning and launch readiness for Spotify's self-serve ad platform — including the Podcast Advertising launch with an 80+ person cross-functional team, driving $5M in initial revenue and contributing to $1.4B in total ad revenue (68% YoY). Selected as Operations Lead for the 100+ person Ads org, building the prioritization frameworks, planning cadences, and onboarding systems that became the standard operating model for the business.
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-12 gap-8 journey-line pl-8">
-                    <div class="md:col-span-4">
-                        <p class="ui-font text-[10px] font-bold text-[var(--muted-blue)] uppercase tracking-widest">2018 — 2020</p>
-                        <h3 class="text-xl font-bold mt-2">Comcast NBCUniversal</h3>
-                        <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Program Manager, Experience Design</p>
-                    </div>
-                    <div class="md:col-span-8 text-slate-500 font-light leading-relaxed">
-                        Led program management for the Xfinity Digital Home web and native applications, driving cross-functional agile delivery across a team of 16 designers — including sprint planning, backlog grooming, feature prioritization, and OKR alignment.
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-12 gap-8 journey-line pl-8">
-                    <div class="md:col-span-4">
-                        <p class="ui-font text-[10px] font-bold text-[var(--muted-blue)] uppercase tracking-widest">2005 — 2017</p>
-                        <h3 class="text-xl font-bold mt-2">American Express</h3>
-                        <p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Senior Product Manager / Senior Product Marketing Manager</p>
-                    </div>
-                    <div class="md:col-span-8 text-slate-500 font-light leading-relaxed">
-                        Over nearly a decade at American Express, led product strategy, digital innovation, and global expansion initiatives across consumer and prepaid products. Launched new products from 0→1 — including a Personal Savings product that drove $1B in deposits — scaled acquisition platforms generating $3.5B in annual revenue and 700K new accounts, and led an international prepaid portfolio across eight global markets generating $689M in revenue.
-                    </div>
-                </div>
+            <div class="strength-card">
+                <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Monetization & Growth</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Ads platforms, acquisition strategy, revenue impact</p>
             </div>
-        </section>
-
-        <section class="text-center bg-white p-12 rounded-[40px] border border-slate-100 shadow-sm">
-            <p class="text-slate-500 mb-8 max-w-xl mx-auto font-light leading-relaxed">
-                I'm currently open to Senior Product Manager and Program Manager roles — particularly in ad tech, CTV, or platforms where operational scale and strategic clarity matter.
-            </p>
-            <a href="contact.html" class="ui-font text-xs font-bold uppercase tracking-[0.3em] text-slate-900 border-b-2 border-slate-900 pb-2 hover:text-[var(--muted-blue)] hover:border-[var(--muted-blue)] transition-all">
-                Get in touch →
-            </a>
-        </section>
-    </main>
-
-</body>
-</html>
+            <div class="strength-card">
+                <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Operational Scale</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Process design, workflow optimization, AI-enabled efficiency</p>
+            </div>
+            <div class="strength-card">
+                <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Strategic Leadership</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Direction setting, clear decision making under ambiguity</p>
+            </div>
+            <div class="strength-card">
+                <h3 class="ui-font font-bold text-xs tracking-widest uppercase mb-4">Stakeholder Engagement</h3>
+                <p class="text-slate-500 text-sm leading-relaxed">Trust building, team alignment, and accountability with senior partners</p>
+            </div>
+        </div>
+    </section>
