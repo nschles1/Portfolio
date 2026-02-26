@@ -12,13 +12,14 @@
             --muted-blue: #6A89A7;
             --clear-sky: #88BDF2;
             --soft-frost: #BDDDFC;
+            --off-white: #F8FAFC;
         }
         body { 
-            background-color: #F8FAFC; 
+            background-color: var(--off-white); 
             color: var(--deep-slate); 
             font-family: 'Noto Sans', sans-serif; 
         }
-        h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
+        h1, h2, h3, .editorial-font { font-family: 'Aboreto', cursive; }
         .ui-font { font-family: 'Manrope', sans-serif; }
         
         .glass-nav { 
@@ -26,9 +27,7 @@
             backdrop-filter: blur(20px); 
         }
 
-        /* --- Animations & Interactions --- */
-        
-        /* Primary Button Animation */
+        /* --- Animations & Hover Effects --- */
         .btn-primary-animate {
             background-color: var(--clear-sky);
             color: white;
@@ -41,28 +40,31 @@
             box-shadow: 0 10px 25px rgba(106, 137, 167, 0.4);
         }
 
-        /* Secondary Button Animation */
-        .btn-secondary-animate {
-            transition: all 0.3s ease;
-        }
-        .btn-secondary-animate:hover {
-            background-color: white;
-            border-color: var(--muted-blue);
-            transform: translateY(-2px);
-        }
-
-        /* Bento Card Lift Effect */
         .bento-card {
             background: white;
             border: 1px solid rgba(56, 73, 89, 0.05);
             transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-            cursor: default;
+            position: relative;
         }
         .bento-card:hover {
-            transform: translateY(-8px) scale(1.01);
+            transform: translateY(-8px);
             box-shadow: 0 30px 60px -12px rgba(56, 73, 89, 0.12);
-            border-color: rgba(136, 189, 242, 0.3);
         }
+
+        .section-header-line {
+            height: 1px;
+            background: var(--deep-slate);
+            opacity: 0.1;
+            margin-top: 1rem;
+        }
+
+        .thinking-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+        .thinking-card:hover { transform: translateY(-4px); }
     </style>
 </head>
 <body class="antialiased">
@@ -79,74 +81,119 @@
         </div>
     </nav>
 
-    <header class="pt-48 pb-32 px-6 max-w-6xl mx-auto">
+    <header class="pt-48 pb-24 px-6 max-w-6xl mx-auto">
         <div class="max-w-4xl">
-            <h1 class="text-5xl md:text-8xl mb-12 leading-[1.1]">
-                Turning <span class="italic text-[var(--muted-blue)]">Ambition</span> <br>
-                Into Execution
+            <h1 class="text-5xl md:text-7xl mb-12 leading-[1.2] uppercase tracking-tight">
+                Bridging the gap between <br>
+                <span class="italic text-[var(--muted-blue)]">Strategy</span> & Execution
             </h1>
             <p class="text-lg md:text-xl text-slate-500 font-light leading-relaxed mb-12">
-                For over 15 years, I've led complex, cross-functional teams to launch new products, scale self-serve ad platforms, and build the operational frameworks that turn ambitious strategies into impactful, customer-centric solutions — across Spotify Advertising, American Express, and DIRECTV. I'm a Product & Program Leader who loves finding ways to monetize, streamline operations, and bring big ideas to life.
+                For over 15 years, I've led complex, cross-functional teams to launch new products, scale self-serve ad platforms, and build the operational frameworks that turn ambitious strategies into impactful, customer-centric solutions — across Spotify Advertising, American Express, and DIRECTV.
             </p>
             <div class="flex flex-wrap gap-6">
-                <a href="about.html" class="btn-primary-animate px-10 py-4 ui-font text-xs font-bold uppercase tracking-widest rounded-full">
-                    About Me
-                </a>
-                <a href="contact.html" class="btn-secondary-animate px-10 py-4 border border-slate-200 text-slate-900 ui-font text-xs font-bold uppercase tracking-widest rounded-full">
-                    Let's Talk
-                </a>
+                <a href="about.html" class="btn-primary-animate px-10 py-4 ui-font text-xs font-bold uppercase tracking-widest rounded-full">About Me</a>
+                <a href="contact.html" class="px-10 py-4 border border-slate-200 text-slate-900 ui-font text-xs font-bold uppercase tracking-widest rounded-full hover:bg-white transition-all">Let's Talk</a>
             </div>
         </div>
     </header>
 
-    <main class="pb-40 px-6 max-w-6xl mx-auto">
+    <section class="pb-32 px-6 max-w-6xl mx-auto">
+        <div class="mb-16">
+            <h2 class="editorial-font text-2xl tracking-[0.2em] uppercase">Work Highlights</h2>
+            <div class="section-header-line w-full md:w-1/3"></div>
+        </div>
+
         <div class="grid md:grid-cols-12 gap-6">
             
-            <div class="md:col-span-8 bento-card p-10 rounded-[40px] flex flex-col justify-between min-h-[400px]">
+            <a href="case-study-spotify-ads.html" class="md:col-span-8 bento-card p-10 rounded-[40px] flex flex-col justify-between min-h-[420px] bg-white border-l-4 border-l-[var(--muted-blue)]">
                 <div>
-                    <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--muted-blue)] bg-blue-50 px-4 py-2 rounded-full">Ad Tech / Self-Serve Platform</span>
-                    <h2 class="text-3xl mt-8 mb-6 editorial-font">Spotify Podcast Advertising</h2>
+                    <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--muted-blue)]">Ad Tech / Self-Serve Platform</span>
+                    <h3 class="text-3xl mt-8 mb-6 editorial-font">Spotify Podcast Advertising</h3>
                     <p class="text-slate-500 font-light leading-relaxed max-w-lg text-lg">
-                        Led an 80+ person cross-functional team to launch Podcast Advertising on Spotify's self-serve Ad Platform — integrating ad creation, delivery, brand safety, reporting, and payments. Drove $5M in initial revenue, contributing to $1.4B in total ad revenue and a 68% YoY increase.
+                        Led an 80+ person cross-functional team to launch Podcast Advertising on Spotify's self-serve Ad Platform. Drove $5M in initial revenue, contributing to $1.4B in total ad revenue.
                     </p>
                 </div>
-            </div>
+                <div class="flex justify-between items-end">
+                    <img src="Spotify log.png" alt="Spotify" class="h-10 w-auto opacity-90">
+                    <span class="ui-font text-[10px] font-bold uppercase tracking-widest opacity-40">View Case Study →</span>
+                </div>
+            </a>
 
-            <div class="md:col-span-4 bento-card p-10 rounded-[40px] bg-slate-900 text-white flex flex-col justify-between">
+            <a href="case-study-amex.html" class="md:col-span-4 bento-card p-10 rounded-[40px] bg-[var(--soft-frost)] flex flex-col justify-between">
                 <div>
-                    <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Consumer Acquisition / Fintech</span>
-                    <h2 class="text-2xl mt-8 mb-6 editorial-font leading-tight">American Express</h2>
-                    <p class="text-slate-300 font-light leading-relaxed text-sm">
-                        Redesigned the primary digital acquisition experience for 1M+ monthly visitors, driving an 11% YoY increase in new accounts. Developed card marketing campaigns generating $3.5B in annual revenue and 700K new accounts annually.
+                    <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--deep-slate)] opacity-60">Fintech / Acquisition</span>
+                    <h3 class="text-2xl mt-8 mb-6 editorial-font leading-tight">American Express</h3>
+                    <p class="text-slate-600 font-light leading-relaxed text-sm mb-6">
+                        Redesigned the digital acquisition experience for 1M+ monthly visitors, driving an 11% YoY increase in new accounts.
                     </p>
                 </div>
-            </div>
+                <img src="Amex Logo.avif" alt="Amex" class="h-10 w-10 object-contain">
+            </a>
 
-            <div class="md:col-span-5 bento-card p-10 rounded-[40px] bg-[var(--soft-frost)] flex flex-col justify-between min-h-[350px]">
+            <a href="case-study-directv.html" class="md:col-span-5 bento-card p-10 rounded-[40px] bg-white flex flex-col justify-between min-h-[350px] border-b-4 border-b-[var(--clear-sky)]">
                 <div>
-                    <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--deep-slate)] opacity-60">CTV / Streaming Growth</span>
-                    <h2 class="text-2xl mt-8 mb-6 editorial-font leading-tight">DIRECTV</h2>
-                    <p class="text-slate-600 font-light leading-relaxed">
-                        Led campaign strategy and GTM execution in the Connected TV space, driving 220K+ new subscribers quarterly and increasing streaming product awareness by 35% — shifting product mix toward higher-margin streaming products.
+                    <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--muted-blue)]">CTV / Streaming Growth</span>
+                    <h3 class="text-2xl mt-8 mb-6 editorial-font">DIRECTV</h3>
+                    <p class="text-slate-500 font-light leading-relaxed mb-6">
+                        Led campaign strategy and GTM in the Connected TV space, driving 220K+ new subscribers quarterly and increasing product awareness by 35%.
                     </p>
                 </div>
-            </div>
+                <img src="Directv logo.jpeg" alt="DIRECTV" class="h-10 w-auto self-start rounded-md">
+            </a>
 
-            <div class="md:col-span-7 bento-card p-10 rounded-[40px] flex flex-col justify-between">
+            <a href="case-study-spotify-gtm.html" class="md:col-span-7 bento-card p-10 rounded-[40px] bg-slate-50 flex flex-col justify-between">
                 <div>
                     <span class="ui-font text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--muted-blue)]">GTM / Advertiser Acquisition</span>
-                    <h2 class="text-3xl mt-8 mb-6 editorial-font">Spotify Ad Marketing Platform</h2>
-                    <p class="text-slate-500 font-light leading-relaxed text-lg">
-                        Built and launched Spotify Advertising's first product marketing website — establishing a new digital channel for advertiser engagement and acquisition, leading a 30+ person cross-functional team from concept to launch.
+                    <h3 class="text-3xl mt-8 mb-6 editorial-font">Spotify Ad Marketing</h3>
+                    <p class="text-slate-500 font-light leading-relaxed text-lg mb-6">
+                        Built and launched Spotify Advertising's first product marketing website, establishing a new digital channel for advertiser engagement.
                     </p>
                 </div>
+                <div class="flex justify-between items-end">
+                    <img src="Spotify log.png" alt="Spotify" class="h-10 w-auto opacity-80">
+                    <span class="ui-font text-[10px] font-bold uppercase tracking-widest opacity-40">View Case Study →</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-[var(--soft-frost)] bg-opacity-30">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <h2 class="editorial-font text-2xl tracking-[0.2em] uppercase">Recent Thinking</h2>
+                    <p class="ui-font text-[10px] font-bold uppercase tracking-widest mt-4 text-[var(--muted-blue)]">Perspectives on Strategy & Operations</p>
+                </div>
+                <a href="thinking.html" class="ui-font text-[10px] font-bold uppercase tracking-widest border-b border-[var(--deep-slate)] pb-1">View All Articles →</a>
             </div>
 
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="thinking-card">
+                    <span class="ui-font text-[10px] font-bold uppercase tracking-widest text-[var(--muted-blue)]">Operational Strategy</span>
+                    <h3 class="text-xl mt-6 mb-4 editorial-font">The Bridge: Strategy to Execution</h3>
+                    <p class="text-slate-500 font-light text-sm mb-8">How to ensure business intent isn't lost when translating goals into engineering backlogs.</p>
+                    <a href="article-bridge.html" class="ui-font text-[10px] font-bold uppercase tracking-widest text-[var(--deep-slate)]">Read More →</a>
+                </div>
+                <div class="thinking-card">
+                    <span class="ui-font text-[10px] font-bold uppercase tracking-widest text-[var(--muted-blue)]">AI & Automation</span>
+                    <h3 class="text-xl mt-6 mb-4 editorial-font">AI in Program Ops</h3>
+                    <p class="text-slate-500 font-light text-sm mb-8">Exploring practical ways to automate the "coordination tax" using Large Language Models.</p>
+                    <a href="article-ai-ops.html" class="ui-font text-[10px] font-bold uppercase tracking-widest text-[var(--deep-slate)]">Read More →</a>
+                </div>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="py-24 border-t border-slate-100 text-center px-6">
-        <p class="editorial-font text-xl md:text-2xl italic text-slate-400 mb-4">"Ambitious strategy, structured execution."</p>
+    <section class="py-32 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="editorial-font text-3xl md:text-5xl tracking-widest uppercase mb-12">Let's Connect</h2>
+            <a href="contact.html" class="ui-font text-xs font-bold uppercase tracking-[0.4em] text-[var(--muted-blue)] hover:text-[var(--deep-slate)] transition-all flex items-center justify-center gap-4 group">
+                Get In Touch <span class="text-lg group-hover:translate-x-2 transition-transform">→</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-100 text-center px-6">
         <p class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-300">© 2026 Nikki Schlesinger</p>
     </footer>
 
