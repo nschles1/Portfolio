@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -13,35 +12,37 @@
             --muted-blue: #6A89A7;
             --clear-sky: #88BDF2;
             --soft-frost: #BDDDFC;
+            --off-white: #F8FAFC;
         }
-        body { 
-            background-color: #F8FAFC; 
-            color: var(--deep-slate); 
-            font-family: 'Noto Sans', sans-serif; 
-        }
-        h1, h2, .editorial-font { font-family: 'Aboreto', cursive; }
-        h3, .ui-font { font-family: 'Manrope', sans-serif; }
-
-        .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
+        body { background-color: var(--off-white); color: var(--deep-slate); font-family: 'Noto Sans', sans-serif; }
+        h1, h2, h3, .editorial-font { font-family: 'Aboreto', cursive; }
+        .ui-font { font-family: 'Manrope', sans-serif; }
         
-        .article-card {
+        .glass-nav { background: rgba(248, 250, 252, 0.8); backdrop-filter: blur(20px); }
+
+        .thinking-card {
             background: white;
             border: 1px solid rgba(56, 73, 89, 0.05);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-radius: 40px;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .article-card:hover {
+        .thinking-card:hover {
             transform: translateY(-8px);
-            border-color: var(--clear-sky);
-            box-shadow: 0 20px 40px rgba(56, 73, 89, 0.04);
+            box-shadow: 0 30px 60px -12px rgba(56, 73, 89, 0.12);
         }
-        
-        .tag {
-            font-family: 'Manrope', sans-serif;
+
+        .category-tag {
             font-size: 10px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.2em;
             color: var(--muted-blue);
+            margin-bottom: 1.5rem;
+            display: block;
         }
     </style>
 </head>
@@ -59,65 +60,57 @@
         </div>
     </nav>
 
-    <main class="pt-48 pb-32 px-6 max-w-6xl mx-auto">
-        <header class="max-w-3xl mb-24">
-            <h1 class="text-4xl md:text-6xl mb-8 leading-tight">Perspective & Strategy</h1>
-            <p class="text-lg text-slate-500 leading-relaxed">
-                Reflections on product operations, program leadership, and bridging the gap between high-level strategy and technical execution.
-            </p>
-        </header>
+    <header class="pt-48 pb-20 px-6 max-w-6xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl mb-6 uppercase tracking-widest">Thinking</h1>
+        <p class="text-lg text-slate-500 font-light max-w-2xl mx-auto">
+            Perspectives on the intersection of product strategy, operational excellence, and the human element of high-performing teams.
+        </p>
+    </header>
 
-        <section class="mb-32">
-            <h2 class="ui-font text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 mb-10">Featured Thinking</h2>
-            <a href="the-bridge.html" class="group block relative overflow-hidden rounded-[40px] bg-white border border-slate-100">
-                <div class="grid md:grid-cols-2 gap-0">
-                    <div class="h-64 md:h-auto bg-slate-200 overflow-hidden">
-                        <div class="w-full h-full bg-[var(--soft-frost)] flex items-center justify-center p-12">
-                            <div class="w-full aspect-square border-2 border-dashed border-[var(--muted-blue)] rounded-full flex items-center justify-center opacity-40">
-                                <span class="tag">Execution Framework</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-10 md:p-16 flex flex-col justify-center">
-                        <span class="tag mb-4">Operational Strategy</span>
-                        <h3 class="text-2xl md:text-3xl font-bold mb-6 leading-snug group-hover:text-[var(--muted-blue)] transition">The Bridge: Transitioning from Strategy to Product Execution</h3>
-                        <p class="text-slate-500 mb-8 leading-relaxed">Ensuring business intent isn't lost when translating high-level goals into engineering backlogs.</p>
-                        <span class="ui-font text-xs font-bold uppercase tracking-widest">Read Article —&gt;</span>
-                    </div>
+    <main class="pb-40 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <a href="mastering-mattering.html" class="thinking-card bg-white lg:col-span-2">
+                <div>
+                    <span class="category-tag">Workplace Culture & Leadership</span>
+                    <h2 class="text-3xl md:text-4xl mb-6 leading-tight">Mastering Mattering: The Secret to Sustainable High Performance</h2>
+                    <p class="text-slate-500 font-light leading-relaxed mb-8 text-lg">
+                        Why shifting the focus from "Did we ship?" to "Do I matter?" is the differentiator between burnout and world-class execution. Informed by the work of Jennifer Breheny Wallace.
+                    </p>
+                </div>
+                <div class="flex justify-between items-end">
+                    <span class="ui-font text-[10px] font-bold uppercase tracking-widest text-[var(--deep-slate)]">Read Article →</span>
+                    <span class="ui-font text-[10px] opacity-30 uppercase tracking-widest">New</span>
                 </div>
             </a>
-        </section>
 
-        <section>
-            <h2 class="ui-font text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400 mb-10">Recent Thoughts</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                
-                <article class="article-card p-10 rounded-[32px] flex flex-col">
-                    <span class="tag mb-4">AI & Automation</span>
-                    <h3 class="text-2xl font-bold mb-4 leading-snug">AI in Program Ops: Using LLMs for Operational Efficiency</h3>
-                    <p class="text-base text-slate-500 mb-8 leading-relaxed">Exploring practical ways to automate the "coordination tax" and synthesize stakeholder feedback using AI.</p>
-                    <div class="mt-auto pt-6 border-t border-slate-50 flex justify-between items-center">
-                        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">6 min read</span>
-                        <a href="ai-in-program-ops.html" class="text-xs font-bold ui-font uppercase tracking-widest hover:text-[var(--clear-sky)] transition">Read Article —&gt;</a>
-                    </div>
-                </article>
+            <a href="the-bridge.html" class="thinking-card bg-slate-50">
+                <div>
+                    <span class="category-tag">Operational Strategy</span>
+                    <h2 class="text-2xl mb-6 leading-tight">The Bridge: Strategy to Execution</h2>
+                    <p class="text-slate-500 font-light text-sm leading-relaxed mb-8">
+                        How to ensure business intent isn't lost when translating high-level goals into engineering backlogs.
+                    </p>
+                </div>
+                <span class="ui-font text-[10px] font-bold uppercase tracking-widest text-[var(--deep-slate)] mt-auto">Read Article →</span>
+            </a>
 
-                <article class="article-card p-10 rounded-[32px] flex flex-col">
-                    <span class="tag mb-4">Product Planning</span>
-                    <h3 class="text-2xl font-bold mb-4 leading-snug">Prioritizing for Impact, Not Just Output</h3>
-                    <p class="text-base text-slate-500 mb-8 leading-relaxed">Frameworks for moving past the "feature factory" mindset and focusing purely on monetization goals.</p>
-                    <div class="mt-auto pt-6 border-t border-slate-50 flex justify-between items-center">
-                        <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">7 min read</span>
-                        <a href="prioritizing-for-impact.html" class="text-xs font-bold ui-font uppercase tracking-widest hover:text-[var(--clear-sky)] transition">Read Article —&gt;</a>
-                    </div>
-                </article>
+            <a href="prioritizing-for-impact.html" class="thinking-card bg-[var(--soft-frost)] bg-opacity-30">
+                <div>
+                    <span class="category-tag">Product Planning</span>
+                    <h2 class="text-2xl mb-6 leading-tight">Prioritizing for Impact</h2>
+                    <p class="text-slate-500 font-light text-sm leading-relaxed mb-8">
+                        Frameworks for navigating high-growth environments without losing focus on what truly moves the needle.
+                    </p>
+                </div>
+                <span class="ui-font text-[10px] font-bold uppercase tracking-widest text-[var(--deep-slate)] mt-auto">Read Article →</span>
+            </a>
 
-            </div>
-        </section>
+        </div>
     </main>
 
-    <footer class="py-24 bg-white border-t border-slate-100 text-center">
-        <a href="contact.html" class="ui-font text-xs font-bold uppercase tracking-[0.3em] text-slate-400 hover:text-slate-900 transition">Get in touch</a>
+    <footer class="py-12 border-t border-slate-100 text-center">
+        <p class="ui-font text-[10px] font-bold uppercase tracking-widest text-slate-300">© 2026 Nikki Schlesinger</p>
     </footer>
 
 </body>
